@@ -1,0 +1,217 @@
+POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00091719-7B4E-E211-87C3-001E67397B11.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>1</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00091719-7B4E-E211-87C3-001E67397B11.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1065
+Connection: close
+SOAPAction: "PrepareToGet"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmPrepareToGet><srmPrepareToGetRequest><arrayOfFileRequests><requestArray><sourceSURL>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00091719-7B4E-E211-87C3-001E67397B11.root</sourceSURL></requestArray></arrayOfFileRequests><desiredFileStorageType>PERMANENT</desiredFileStorageType><desiredTotalRequestTime>3600</desiredTotalRequestTime><transferParameters><arrayOfTransferProtocols><stringArray>gsiftp</stringArray></arrayOfTransferProtocols></transferParameters></srmPrepareToGetRequest></srm2:srmPrepareToGet></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00BED6BB-9C65-E211-A8E8-003048D4775A.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 778
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00BED6BB-9C65-E211-A8E8-003048D4775A.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00BED6BB-9C65-E211-A8E8-003048D4775A.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 778
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00BED6BB-9C65-E211-A8E8-003048D4775A.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00091719-7B4E-E211-87C3-001E67397B11.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1065
+Connection: close
+SOAPAction: "PrepareToGet"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmPrepareToGet><srmPrepareToGetRequest><arrayOfFileRequests><requestArray><sourceSURL>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/00091719-7B4E-E211-87C3-001E67397B11.root</sourceSURL></requestArray></arrayOfFileRequests><desiredFileStorageType>PERMANENT</desiredFileStorageType><desiredTotalRequestTime>3600</desiredTotalRequestTime><transferParameters><arrayOfTransferProtocols><stringArray>gsiftp</stringArray></arrayOfTransferProtocols></transferParameters></srmPrepareToGetRequest></srm2:srmPrepareToGet></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 778
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 778
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 778
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 807
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 778
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop//store/data/Run2012C/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 806
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1064
+Connection: close
+SOAPAction: "PrepareToGet"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmPrepareToGet><srmPrepareToGetRequest><arrayOfFileRequests><requestArray><sourceSURL>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</sourceSURL></requestArray></arrayOfFileRequests><desiredFileStorageType>PERMANENT</desiredFileStorageType><desiredTotalRequestTime>3600</desiredTotalRequestTime><transferParameters><arrayOfTransferProtocols><stringArray>gsiftp</stringArray></arrayOfTransferProtocols></transferParameters></srmPrepareToGetRequest></srm2:srmPrepareToGet></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 806
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1064
+Connection: close
+SOAPAction: "PrepareToGet"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmPrepareToGet><srmPrepareToGetRequest><arrayOfFileRequests><requestArray><sourceSURL>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</sourceSURL></requestArray></arrayOfFileRequests><desiredFileStorageType>PERMANENT</desiredFileStorageType><desiredTotalRequestTime>3600</desiredTotalRequestTime><transferParameters><arrayOfTransferProtocols><stringArray>gsiftp</stringArray></arrayOfTransferProtocols></transferParameters></srmPrepareToGetRequest></srm2:srmPrepareToGet></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 806
+Connection: close
+SOAPAction: "Ls"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmLs><srmLsRequest><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs><fullDetailedList>true</fullDetailedList><numOfLevels>0</numOfLevels></srmLsRequest></srm2:srmLs></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 1064
+Connection: close
+SOAPAction: "PrepareToGet"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmPrepareToGet><srmPrepareToGetRequest><arrayOfFileRequests><requestArray><sourceSURL>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</sourceSURL></requestArray></arrayOfFileRequests><desiredFileStorageType>PERMANENT</desiredFileStorageType><desiredTotalRequestTime>3600</desiredTotalRequestTime><transferParameters><arrayOfTransferProtocols><stringArray>gsiftp</stringArray></arrayOfTransferProtocols></transferParameters></srmPrepareToGetRequest></srm2:srmPrepareToGet></SOAP-ENV:Body></SOAP-ENV:Envelope>POST /srm/v2/server HTTP/1.1
+Host: srm-dcache.rcac.purdue.edu:8443
+User-Agent: gSOAP/2.7
+Content-Type: text/xml; charset=utf-8
+Content-Length: 816
+Connection: close
+SOAPAction: "ReleaseFiles"
+
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:srm2="http://srm.lbl.gov/StorageResourceManager"><SOAP-ENV:Body SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"><srm2:srmReleaseFiles><srmReleaseFilesRequest><requestToken>get:404418</requestToken><arrayOfSURLs><urlArray>srm://srm-dcache.rcac.purdue.edu:8443/srm/v2/server?SFN=/mnt/hadoop/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/065F63E3-A565-E211-A858-001E67398DE5.root</urlArray></arrayOfSURLs></srmReleaseFilesRequest></srm2:srmReleaseFiles></SOAP-ENV:Body></SOAP-ENV:Envelope>

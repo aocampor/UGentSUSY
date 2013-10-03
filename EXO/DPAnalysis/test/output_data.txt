@@ -1,0 +1,1517 @@
+/cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/python/FWCore/ParameterSet/Config.py:434: DeprecationWarning: Configuration.StandardSequences.Geometry_cff is deprecated, please use Configuration.Geometry.GeometryIdeal_cff
+  module = __import__(moduleName)
+------------------------------------------------------------
+INFO   : cleaning has been removed. Switching output from
+         clean PAT candidates to selected PAT candidates.
+Adapting PF Muons 
+***************** 
+WARNING: particle based isolation must be studied
+
+ muon source: cms.InputTag("pfIsolatedMuonsPFlow")
+ isolation  : cms.PSet(
+    pfNeutralHadrons = cms.InputTag("muPFIsoValueNeutral04PFlow"),
+    pfChargedAll = cms.InputTag("muPFIsoValueChargedAll04PFlow"),
+    pfPUChargedHadrons = cms.InputTag("muPFIsoValuePU04PFlow"),
+    pfPhotons = cms.InputTag("muPFIsoValueGamma04PFlow"),
+    pfChargedHadrons = cms.InputTag("muPFIsoValueCharged04PFlow")
+)
+ isodeposits: 
+cms.PSet(
+    pfNeutralHadrons = cms.InputTag("muPFIsoDepositNeutralPFlow"),
+    pfChargedAll = cms.InputTag("muPFIsoDepositChargedAllPFlow"),
+    pfPUChargedHadrons = cms.InputTag("muPFIsoDepositPUPFlow"),
+    pfPhotons = cms.InputTag("muPFIsoDepositGammaPFlow"),
+    pfChargedHadrons = cms.InputTag("muPFIsoDepositChargedPFlow")
+)
+
+Adapting PF Electrons 
+********************* 
+WARNING: particle based isolation must be studied
+
+ PF electron source: cms.InputTag("pfIsolatedElectronsPFlow")
+ isolation  :
+cms.PSet(
+    pfNeutralHadrons = cms.InputTag("elPFIsoValueNeutral04PFIdPFlow"),
+    pfChargedAll = cms.InputTag("elPFIsoValueChargedAll04PFIdPFlow"),
+    pfPUChargedHadrons = cms.InputTag("elPFIsoValuePU04PFIdPFlow"),
+    pfPhotons = cms.InputTag("elPFIsoValueGamma04PFIdPFlow"),
+    pfChargedHadrons = cms.InputTag("elPFIsoValueCharged04PFIdPFlow")
+)
+ isodeposits: 
+cms.PSet(
+    pfNeutralHadrons = cms.InputTag("elPFIsoDepositNeutralPFlow"),
+    pfChargedAll = cms.InputTag("elPFIsoDepositChargedAllPFlow"),
+    pfPUChargedHadrons = cms.InputTag("elPFIsoDepositPUPFlow"),
+    pfPhotons = cms.InputTag("elPFIsoDepositGammaPFlow"),
+    pfChargedHadrons = cms.InputTag("elPFIsoDepositChargedPFlow")
+)
+
+removing traditional isolation
+Temporarily switching off photons completely
+WARNING: called applyPostfix for module/sequence cleanPatCandidateSummary which is not in patDefaultSequencePFlow!
+---------------------------------------------------------------------
+INFO   : some objects have been removed from the sequence. Switching 
+         off PAT cross collection cleaning, as it might be of limited
+         sense now. If you still want to keep object collection cross
+         cleaning within PAT you need to run and configure it by hand
+WARNING: called applyPostfix for module/sequence countPatCandidates which is not in patDefaultSequencePFlow!
+WARNING: called applyPostfix for module/sequence cleanPatMuons which is not in patDefaultSequencePFlow!
+WARNING: called applyPostfix for module/sequence cleanPatJets which is not in patDefaultSequencePFlow!
+WARNING: called applyPostfix for module/sequence cleanPatPhotons which is not in patDefaultSequencePFlow!
+WARNING: called applyPostfix for module/sequence cleanPatElectrons which is not in patDefaultSequencePFlow!
+WARNING: called applyPostfix for module/sequence cleanPatTaus which is not in patDefaultSequencePFlow!
+WARNING: called applyPostfix for module/sequence cleanPatCandidateSummary which is not in patDefaultSequencePFlow!
+------------------------------------------------------------
+INFO   : cleaning has been removed. Switching output from
+         clean PAT candidates to selected PAT candidates.
+Switching to PFJets,   AK5
+************************ 
+input collection:  cms.InputTag("pfNoTauPFlow")
+
+The btaginfo below will be written to the jet collection in the PATtuple (default is all, see PatAlgos/PhysicsTools/python/tools/jetTools.py)
+impactParameterTagInfos
+secondaryVertexTagInfos
+softMuonTagInfos
+secondaryVertexNegativeTagInfos
+secondaryVertexNegativeTagInfos
+inclusiveSecondaryVertexFinderTagInfos
+softElectronTagInfos
+
+The bdiscriminators below will be written to the jet collection in the PATtuple (default is all, see PatAlgos/PhysicsTools/python/tools/jetTools.py)
+jetBProbabilityBJetTags
+jetProbabilityBJetTags
+trackCountingHighPurBJetTags
+trackCountingHighEffBJetTags
+simpleSecondaryVertexHighEffBJetTags
+simpleSecondaryVertexHighPurBJetTags
+combinedSecondaryVertexBJetTags
+combinedSecondaryVertexMVABJetTags
+softMuonBJetTags
+softMuonByPtBJetTags
+softMuonByIP3dBJetTags
+simpleSecondaryVertexNegativeHighEffBJetTags
+simpleSecondaryVertexNegativeHighPurBJetTags
+negativeTrackCountingHighEffJetTags
+negativeTrackCountingHighPurJetTags
+combinedInclusiveSecondaryVertexBJetTags
+combinedMVABJetTags
+patTaus will be produced from taus of type: hpsPFTau that pass ['DiscriminationByLooseCombinedIsolationDBSumPtCorr']
+Tau discriminators:  cms.InputTag("hpsPFTauProducer") -> cms.InputTag("hpsPFTauProducerPFlow")
+Tau type:  hpsPFTau
+ Taus:  cms.InputTag("hpsPFTauProducer") -> cms.InputTag("hpsPFTauProducerPFlow")
+WARNING: called applyPostfix for module/sequence makePatTaus which is not in patDefaultSequencePFlow!
+MET: using  cms.InputTag("pfMETPFlow")
+Switching PV collection for PF2PAT: cms.InputTag("offlinePrimaryVertices")
+***********************************
+************** MC dependence removal ************
+removing MC dependencies for photons
+removing MC dependencies for electrons
+removing MC dependencies for muons
+removing MC dependencies for taus
+removing MC dependencies for jets
+Done: PF2PAT interfaced to PAT, postfix= PFlow
+13-Aug-2013 11:30:54 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/C2E149D0-B165-E211-AD41-001E67396DEC.root
+13-Aug-2013 11:30:56 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/C2E149D0-B165-E211-AD41-001E67396DEC.root
+--- Reader                   : Booking "BDT" of type "BDT" from /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_X_0BL_BDT.weights.xml.
+--- MethodBase               : Reading weight file: /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_X_0BL_BDT.weights.xml
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.0.7
+--- BDT                      : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDT" of type: "BDT"
+--- Reader                   : Booking "BDT" of type "BDT" from /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_1_1BL_BDT.weights.xml.
+--- MethodBase               : Reading weight file: /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_1_1BL_BDT.weights.xml
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.0.7
+--- BDT                      : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDT" of type: "BDT"
+--- Reader                   : Booking "BDT" of type "BDT" from /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_0_1BL_BDT.weights.xml.
+--- MethodBase               : Reading weight file: /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_0_1BL_BDT.weights.xml
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.0.7
+--- BDT                      : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDT" of type: "BDT"
+--- Reader                   : Booking "BDT" of type "BDT" from /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_X_0EC_BDT.weights.xml.
+--- MethodBase               : Reading weight file: /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_X_0EC_BDT.weights.xml
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.0.7
+--- BDT                      : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDT" of type: "BDT"
+--- Reader                   : Booking "BDT" of type "BDT" from /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_1_1EC_BDT.weights.xml.
+--- MethodBase               : Reading weight file: /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_1_1EC_BDT.weights.xml
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.0.7
+--- BDT                      : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDT" of type: "BDT"
+--- Reader                   : Booking "BDT" of type "BDT" from /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_0_1EC_BDT.weights.xml.
+--- MethodBase               : Reading weight file: /cvmfs/cms.cern.ch/slc5_amd64_gcc462/cms/cmssw-patch/CMSSW_5_3_11_patch4/src/RecoTauTag/RecoTau/data/TMVAClassification_v2_0_1EC_BDT.weights.xml
+--- BDT                      : Read method "BDT" of type "BDT"
+--- BDT                      : MVA method was trained with TMVA Version: 4.0.7
+--- BDT                      : MVA method was trained with ROOT Version: 5.27/06
+--- Reader                   : Booked classifier "BDT" of type: "BDT"
+Begin processing the 1st record. Run 207279, Event 457715347, LumiSection 310 at 13-Aug-2013 11:31:06.017 CEST
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+ ** Trigger size = 452
+ name: HLTriggerFirstPath (0)  idx:0  accept:0
+ name: HLT_Activity_Ecal_SC7_v13 (1)  idx:1  accept:0
+ name: HLT_L1SingleJet16_v7 (2)  idx:2  accept:0
+ name: HLT_L1SingleJet36_v7 (3)  idx:3  accept:0
+ name: HLT_PFJet40_v8 (4)  idx:4  accept:0
+ name: HLT_PFJet80_v9 (5)  idx:5  accept:0
+ name: HLT_PFJet140_v9 (6)  idx:6  accept:0
+ name: HLT_PFJet200_v9 (7)  idx:7  accept:0
+ name: HLT_PFJet260_v9 (8)  idx:8  accept:0
+ name: HLT_PFJet320_v9 (9)  idx:9  accept:0
+ name: HLT_Jet370_NoJetID_v15 (10)  idx:10  accept:0
+ name: HLT_PFJet400_v9 (11)  idx:11  accept:0
+ name: HLT_MonoCentralPFJet80_PFMETnoMu105_NHEF0p95_v4 (12)  idx:12  accept:0
+ name: HLT_SingleForJet25_v4 (13)  idx:13  accept:0
+ name: HLT_SingleForJet15_v4 (14)  idx:14  accept:0
+ name: HLT_DiPFJetAve40_v9 (15)  idx:15  accept:0
+ name: HLT_DiPFJetAve80_v10 (16)  idx:16  accept:0
+ name: HLT_DiPFJetAve140_v10 (17)  idx:17  accept:0
+ name: HLT_DiPFJetAve200_v10 (18)  idx:18  accept:0
+ name: HLT_DiPFJetAve260_v10 (19)  idx:19  accept:0
+ name: HLT_DiPFJetAve320_v10 (20)  idx:20  accept:0
+ name: HLT_DiPFJetAve400_v10 (21)  idx:21  accept:0
+ name: HLT_FatDiPFJetMass750_DR1p1_Deta1p5_v10 (22)  idx:22  accept:0
+ name: HLT_DoubleJet20_ForwardBackward_v4 (23)  idx:23  accept:0
+ name: HLT_DiJet80_DiJet60_DiJet20_v6 (24)  idx:24  accept:0
+ name: HLT_DiPFJet40_PFMETnoMu65_MJJ800VBF_AllJets_v9 (25)  idx:25  accept:0
+ name: HLT_DiPFJet40_PFMETnoMu65_MJJ600VBF_LeadingJets_v9 (26)  idx:26  accept:0
+ name: HLT_DiJet40Eta2p6_BTagIP3DFastPV_v7 (27)  idx:27  accept:0
+ name: HLT_DiJet80Eta2p6_BTagIP3DFastPVLoose_v7 (28)  idx:28  accept:0
+ name: HLT_Jet60Eta1p7_Jet53Eta1p7_DiBTagIP3DFastPV_v7 (29)  idx:29  accept:0
+ name: HLT_Jet80Eta1p7_Jet70Eta1p7_DiBTagIP3DFastPV_v7 (30)  idx:30  accept:0
+ name: HLT_Jet160Eta2p4_Jet120Eta2p4_DiBTagIP3DFastPVLoose_v7 (31)  idx:31  accept:0
+ name: HLT_QuadJet45_v1 (32)  idx:32  accept:0
+ name: HLT_QuadJet50_v5 (33)  idx:33  accept:0
+ name: HLT_QuadJet60_DiJet20_v6 (34)  idx:34  accept:0
+ name: HLT_QuadJet70_v6 (35)  idx:35  accept:0
+ name: HLT_QuadJet80_v6 (36)  idx:36  accept:0
+ name: HLT_QuadJet90_v6 (37)  idx:37  accept:0
+ name: HLT_QuadJet75_55_35_20_BTagIP_VBF_v7 (38)  idx:38  accept:0
+ name: HLT_QuadJet75_55_38_20_BTagIP_VBF_v7 (39)  idx:39  accept:0
+ name: HLT_QuadJet75_55_35_20_VBF_v1 (40)  idx:40  accept:0
+ name: HLT_QuadPFJet78_61_44_31_BTagCSV_VBF_v6 (41)  idx:41  accept:0
+ name: HLT_QuadPFJet78_61_44_31_VBF_v1 (42)  idx:42  accept:0
+ name: HLT_QuadPFJet82_65_48_35_BTagCSV_VBF_v6 (43)  idx:43  accept:0
+ name: HLT_SixJet35_v6 (44)  idx:44  accept:0
+ name: HLT_SixJet45_v6 (45)  idx:45  accept:0
+ name: HLT_SixJet50_v6 (46)  idx:46  accept:0
+ name: HLT_EightJet30_eta3p0_v5 (47)  idx:47  accept:0
+ name: HLT_EightJet35_eta3p0_v5 (48)  idx:48  accept:0
+ name: HLT_ExclDiJet35_HFOR_v4 (49)  idx:49  accept:0
+ name: HLT_ExclDiJet35_HFAND_v4 (50)  idx:50  accept:0
+ name: HLT_ExclDiJet80_HFAND_v4 (51)  idx:51  accept:0
+ name: HLT_JetE30_NoBPTX_v14 (52)  idx:52  accept:0
+ name: HLT_JetE30_NoBPTX3BX_NoHalo_v16 (53)  idx:53  accept:0
+ name: HLT_JetE50_NoBPTX3BX_NoHalo_v13 (54)  idx:54  accept:0
+ name: HLT_JetE70_NoBPTX3BX_NoHalo_v5 (55)  idx:55  accept:0
+ name: HLT_HT200_AlphaT0p57_v8 (56)  idx:56  accept:0
+ name: HLT_HT200_v6 (57)  idx:57  accept:0
+ name: HLT_HT250_AlphaT0p55_v8 (58)  idx:58  accept:0
+ name: HLT_HT250_AlphaT0p57_v8 (59)  idx:59  accept:0
+ name: HLT_HT250_v7 (60)  idx:60  accept:0
+ name: HLT_HT300_AlphaT0p53_v8 (61)  idx:61  accept:0
+ name: HLT_HT300_AlphaT0p54_v14 (62)  idx:62  accept:0
+ name: HLT_HT300_v7 (63)  idx:63  accept:0
+ name: HLT_HT300_DoubleDisplacedPFJet60_v10 (64)  idx:64  accept:0
+ name: HLT_HT300_DoubleDisplacedPFJet60_ChgFraction10_v10 (65)  idx:65  accept:0
+ name: HLT_HT300_SingleDisplacedPFJet60_v10 (66)  idx:66  accept:0
+ name: HLT_HT300_SingleDisplacedPFJet60_ChgFraction10_v10 (67)  idx:67  accept:0
+ name: HLT_HT350_v7 (68)  idx:68  accept:0
+ name: HLT_HT350_AlphaT0p52_v8 (69)  idx:69  accept:0
+ name: HLT_HT350_AlphaT0p53_v19 (70)  idx:70  accept:0
+ name: HLT_HT400_v7 (71)  idx:71  accept:0
+ name: HLT_HT400_AlphaT0p51_v19 (72)  idx:72  accept:0
+ name: HLT_HT400_AlphaT0p52_v14 (73)  idx:73  accept:0
+ name: HLT_HT450_AlphaT0p51_v14 (74)  idx:74  accept:0
+ name: HLT_HT450_v7 (75)  idx:75  accept:0
+ name: HLT_HT500_v7 (76)  idx:76  accept:0
+ name: HLT_HT550_v7 (77)  idx:77  accept:0
+ name: HLT_HT650_v7 (78)  idx:78  accept:0
+ name: HLT_HT650_Track50_dEdx3p6_v10 (79)  idx:79  accept:0
+ name: HLT_HT650_Track60_dEdx3p7_v10 (80)  idx:80  accept:0
+ name: HLT_HT750_v7 (81)  idx:81  accept:0
+ name: HLT_PFNoPUHT350_v4 (82)  idx:82  accept:0
+ name: HLT_PFNoPUHT650_v4 (83)  idx:83  accept:0
+ name: HLT_PFNoPUHT650_DiCentralPFNoPUJet80_CenPFNoPUJet40_v4 (84)  idx:84  accept:0
+ name: HLT_PFNoPUHT700_v4 (85)  idx:85  accept:0
+ name: HLT_PFNoPUHT750_v4 (86)  idx:86  accept:0
+ name: HLT_PFMET150_v7 (87)  idx:87  accept:0
+ name: HLT_PFMET180_v7 (88)  idx:88  accept:0
+ name: HLT_DiCentralJetSumpT100_dPhi05_DiCentralPFJet60_25_PFMET100_HBHENoiseCleaned_v5 (89)  idx:89  accept:0
+ name: HLT_DiCentralPFJet30_PFMET80_v6 (90)  idx:90  accept:0
+ name: HLT_DiCentralPFNoPUJet50_PFMETORPFMETNoMu80_v4 (91)  idx:91  accept:0
+ name: HLT_DiCentralPFJet30_PFMET80_BTagCSV07_v5 (92)  idx:92  accept:0
+ name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d03_v5 (93)  idx:93  accept:0
+ name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d05_v5 (94)  idx:94  accept:0
+ name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05_v5 (95)  idx:95  accept:0
+ name: HLT_MET80_v5 (96)  idx:96  accept:0
+ name: HLT_MET80_Parked_v5 (97)  idx:97  accept:0
+ name: HLT_MET80_Track50_dEdx3p6_v6 (98)  idx:98  accept:0
+ name: HLT_MET80_Track60_dEdx3p7_v6 (99)  idx:99  accept:0
+ name: HLT_MET100_HBHENoiseCleaned_v1 (100)  idx:100  accept:0
+ name: HLT_MET120_v13 (101)  idx:101  accept:0
+ name: HLT_MET120_HBHENoiseCleaned_v6 (102)  idx:102  accept:0
+ name: HLT_MET200_v12 (103)  idx:103  accept:0
+ name: HLT_MET200_HBHENoiseCleaned_v5 (104)  idx:104  accept:0
+ name: HLT_MET300_v4 (105)  idx:105  accept:0
+ name: HLT_MET300_HBHENoiseCleaned_v5 (106)  idx:106  accept:0
+ name: HLT_MET400_v7 (107)  idx:107  accept:0
+ name: HLT_MET400_HBHENoiseCleaned_v5 (108)  idx:108  accept:0
+ name: HLT_L1SingleMuOpen_v7 (109)  idx:109  accept:0
+ name: HLT_L1SingleMu12_v2 (110)  idx:110  accept:0
+ name: HLT_L2Mu70_2Cha_eta2p1_PFMET55_v2 (111)  idx:111  accept:0
+ name: HLT_L2Mu70_2Cha_eta2p1_PFMET60_v2 (112)  idx:112  accept:0
+ name: HLT_L2Mu20_eta2p1_NoVertex_v2 (113)  idx:113  accept:0
+ name: HLT_L2Mu10_NoVertex_NoBPTX3BX_NoHalo_v4 (114)  idx:114  accept:0
+ name: HLT_L2Mu20_NoVertex_2Cha_NoBPTX3BX_NoHalo_v1 (115)  idx:115  accept:0
+ name: HLT_L2Mu30_NoVertex_2Cha_NoBPTX3BX_NoHalo_v1 (116)  idx:116  accept:0
+ name: HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v8 (117)  idx:117  accept:0
+ name: HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v8 (118)  idx:118  accept:0
+ name: HLT_Mu5_v20 (119)  idx:119  accept:0
+ name: HLT_Mu8_v18 (120)  idx:120  accept:0
+ name: HLT_Mu12_v18 (121)  idx:121  accept:0
+ name: HLT_Mu17_v5 (122)  idx:122  accept:0
+ name: HLT_Mu12_eta2p1_L1Mu10erJetC12WdEtaPhi1DiJetsC_v7 (123)  idx:123  accept:0
+ name: HLT_Mu15_eta2p1_L1Mu10erJetC12WdEtaPhi1DiJetsC_v3 (124)  idx:124  accept:0
+ name: HLT_Mu15_eta2p1_v5 (125)  idx:125  accept:0
+ name: HLT_Mu24_v16 (126)  idx:126  accept:0
+ name: HLT_Mu24_eta2p1_v5 (127)  idx:127  accept:0
+ name: HLT_Mu30_v16 (128)  idx:128  accept:0
+ name: HLT_Mu30_eta2p1_v5 (129)  idx:129  accept:0
+ name: HLT_Mu40_v14 (130)  idx:130  accept:0
+ name: HLT_Mu40_eta2p1_v11 (131)  idx:131  accept:0
+ name: HLT_Mu50_eta2p1_v8 (132)  idx:132  accept:0
+ name: HLT_RelIso1p0Mu5_v6 (133)  idx:133  accept:0
+ name: HLT_RelIso1p0Mu20_v3 (134)  idx:134  accept:0
+ name: HLT_IsoMu15_eta2p1_L1ETM20_v7 (135)  idx:135  accept:0
+ name: HLT_IsoMu20_eta2p1_v7 (136)  idx:136  accept:0
+ name: HLT_IsoMu24_v17 (137)  idx:137  accept:0
+ name: HLT_IsoMu24_eta2p1_v15 (138)  idx:138  accept:0
+ name: HLT_IsoMu30_v11 (139)  idx:139  accept:0
+ name: HLT_IsoMu30_eta2p1_v15 (140)  idx:140  accept:0
+ name: HLT_IsoMu34_eta2p1_v13 (141)  idx:141  accept:0
+ name: HLT_IsoMu40_eta2p1_v10 (142)  idx:142  accept:0
+ name: HLT_Mu40_eta2p1_Track50_dEdx3p6_v5 (143)  idx:143  accept:0
+ name: HLT_Mu40_eta2p1_Track60_dEdx3p7_v5 (144)  idx:144  accept:0
+ name: HLT_L2DoubleMu23_NoVertex_v11 (145)  idx:145  accept:0
+ name: HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v3 (146)  idx:146  accept:0
+ name: HLT_L2DoubleMu38_NoVertex_2Cha_Angle2p5_v3 (147)  idx:147  accept:0
+ name: HLT_DoubleMu11_Acoplanarity03_v5 (148)  idx:148  accept:0
+ name: HLT_DoubleMu4_Jpsi_Displaced_v12 (149)  idx:149  accept:0
+ name: HLT_DoubleMu4_JpsiTk_Displaced_v6 (150)  idx:150  accept:0
+ name: HLT_DoubleMu3_4_Dimuon5_Bs_Central_v5 (151)  idx:151  accept:0
+ name: HLT_DoubleMu3p5_4_Dimuon5_Bs_Central_v5 (152)  idx:152  accept:0
+ name: HLT_DoubleMu4_Dimuon7_Bs_Forward_v5 (153)  idx:153  accept:0
+ name: HLT_DoubleMu3p5_LowMass_Displaced_v6 (154)  idx:154  accept:0
+ name: HLT_DoubleMu3p5_LowMassNonResonant_Displaced_v6 (155)  idx:155  accept:0
+ name: HLT_Dimuon0_Jpsi_v17 (156)  idx:156  accept:0
+ name: HLT_Dimuon0_Jpsi_NoVertexing_v14 (157)  idx:157  accept:0
+ name: HLT_Dimuon0_Upsilon_v17 (158)  idx:158  accept:0
+ name: HLT_Dimuon0_PsiPrime_v6 (159)  idx:159  accept:0
+ name: HLT_Dimuon5_Upsilon_v6 (160)  idx:160  accept:0
+ name: HLT_Dimuon5_PsiPrime_v6 (161)  idx:161  accept:0
+ name: HLT_Dimuon7_Upsilon_v7 (162)  idx:162  accept:0
+ name: HLT_Dimuon7_PsiPrime_v3 (163)  idx:163  accept:0
+ name: HLT_Dimuon8_Jpsi_v7 (164)  idx:164  accept:0
+ name: HLT_Dimuon8_Upsilon_v6 (165)  idx:165  accept:0
+ name: HLT_Dimuon10_Jpsi_v6 (166)  idx:166  accept:0
+ name: HLT_Dimuon11_Upsilon_v6 (167)  idx:167  accept:0
+ name: HLT_Dimuon0_Jpsi_Muon_v18 (168)  idx:168  accept:0
+ name: HLT_Dimuon0_Upsilon_Muon_v18 (169)  idx:169  accept:0
+ name: HLT_Dimuon3p5_SameSign_v6 (170)  idx:170  accept:0
+ name: HLT_DoubleMu4_Acoplanarity03_v5 (171)  idx:171  accept:0
+ name: HLT_Tau2Mu_ItTrack_v7 (172)  idx:172  accept:0
+ name: HLT_Mu13_Mu8_v22 (173)  idx:173  accept:0
+ name: HLT_Mu17_Mu8_v22 (174)  idx:174  accept:0
+ name: HLT_Mu13_Mu8_NoDZ_v1 (175)  idx:175  accept:0
+ name: HLT_Mu17_TkMu8_v14 (176)  idx:176  accept:0
+ name: HLT_Mu17_TkMu8_NoDZ_v1 (177)  idx:177  accept:0
+ name: HLT_Mu22_TkMu8_v9 (178)  idx:178  accept:0
+ name: HLT_Mu22_TkMu22_v9 (179)  idx:179  accept:0
+ name: HLT_TripleMu5_v19 (180)  idx:180  accept:0
+ name: HLT_DoubleMu5_IsoMu5_v20 (181)  idx:181  accept:0
+ name: HLT_Mu5_L2Mu3_Jpsi_v8 (182)  idx:182  accept:0
+ name: HLT_Mu5_Track2_Jpsi_v21 (183)  idx:183  accept:0
+ name: HLT_Mu5_Track3p5_Jpsi_v7 (184)  idx:184  accept:0
+ name: HLT_Mu7_Track7_Jpsi_v20 (185)  idx:185  accept:0
+ name: HLT_Mu15_TkMu5_Onia_v1 (186)  idx:186  accept:0
+ name: HLT_BTagMu_Jet20_Mu4_v2 (187)  idx:187  accept:0
+ name: HLT_BTagMu_Jet60_Mu4_v2 (188)  idx:188  accept:0
+ name: HLT_Photon20_CaloIdVL_v4 (189)  idx:189  accept:0
+ name: HLT_Photon20_CaloIdVL_IsoL_v16 (190)  idx:190  accept:0
+ name: HLT_Photon22_R9Id90_HE10_Iso40_EBOnly_v5 (191)  idx:191  accept:0
+ name: HLT_Photon26_Photon18_v12 (192)  idx:192  accept:0
+ name: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_R9Id85_OR_CaloId10_Iso50_Mass70_v2 (193)  idx:193  accept:0
+ name: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_v5 (194)  idx:194  accept:0
+ name: HLT_Photon30_v1 (195)  idx:195  accept:0
+ name: HLT_Photon30_CaloIdVL_v14 (196)  idx:196  accept:0
+ name: HLT_Photon30_R9Id90_CaloId_HE10_Iso40_EBOnly_v1 (197)  idx:197  accept:0
+ name: HLT_Photon30_R9Id90_CaloId_HE10_Iso40_EBOnly_Met25_HBHENoiseCleaned_v1 (198)  idx:198  accept:1
+ name: HLT_Photon36_R9Id90_HE10_Iso40_EBOnly_v5 (199)  idx:199  accept:0
+ name: HLT_Photon36_Photon22_v6 (200)  idx:200  accept:0
+ name: HLT_Photon36_R9Id85_Photon22_R9Id85_v4 (201)  idx:201  accept:0
+ name: HLT_Photon36_R9Id85_Photon22_CaloId10_Iso50_v6 (202)  idx:202  accept:0
+ name: HLT_Photon36_CaloId10_Iso50_Photon22_R9Id85_v6 (203)  idx:203  accept:0
+ name: HLT_Photon36_CaloId10_Iso50_Photon22_CaloId10_Iso50_v6 (204)  idx:204  accept:0
+ name: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon22_R9Id85_OR_CaloId10_Iso50_v6 (205)  idx:205  accept:0
+ name: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon22_v5 (206)  idx:206  accept:0
+ name: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon10_R9Id85_OR_CaloId10_Iso50_Mass80_v1 (207)  idx:207  accept:0
+ name: HLT_Photon50_CaloIdVL_v10 (208)  idx:208  accept:0
+ name: HLT_Photon50_CaloIdVL_IsoL_v17 (209)  idx:209  accept:0
+ Trigger Found : HLT_Photon50_CaloIdVL_IsoL_v17 accepted ? 0
+ name: HLT_Photon50_R9Id90_HE10_Iso40_EBOnly_v5 (210)  idx:210  accept:0
+ name: HLT_Photon60_CaloIdL_MHT70_v11 (211)  idx:211  accept:0
+ name: HLT_Photon60_CaloIdL_HT300_v4 (212)  idx:212  accept:0
+ name: HLT_Photon70_CaloIdXL_PFNoPUHT400_v4 (213)  idx:213  accept:0
+ name: HLT_Photon70_CaloIdXL_PFNoPUHT500_v4 (214)  idx:214  accept:0
+ name: HLT_Photon70_CaloIdXL_PFMET100_v7 (215)  idx:215  accept:0
+ name: HLT_Photon75_CaloIdVL_v13 (216)  idx:216  accept:0
+ name: HLT_Photon75_R9Id90_HE10_Iso40_EBOnly_v5 (217)  idx:217  accept:0
+ name: HLT_Photon90_CaloIdVL_v10 (218)  idx:218  accept:0
+ name: HLT_Photon90_R9Id90_HE10_Iso40_EBOnly_v5 (219)  idx:219  accept:0
+ name: HLT_DisplacedPhoton65_CaloIdVL_IsoL_PFMET25_v4 (220)  idx:220  accept:1
+ Trigger Found : HLT_DisplacedPhoton65_CaloIdVL_IsoL_PFMET25_v4 accepted ? 1
+ name: HLT_DisplacedPhoton65EBOnly_CaloIdVL_IsoL_PFMET30_v4 (221)  idx:221  accept:0
+ name: HLT_Photon135_v7 (222)  idx:222  accept:0
+ name: HLT_Photon150_v4 (223)  idx:223  accept:0
+ name: HLT_Photon160_v4 (224)  idx:224  accept:0
+ name: HLT_Photon300_NoHE_v5 (225)  idx:225  accept:0
+ name: HLT_DoublePhoton48_HEVT_v8 (226)  idx:226  accept:0
+ name: HLT_DoublePhoton53_HEVT_v2 (227)  idx:227  accept:0
+ name: HLT_DoublePhoton70_v6 (228)  idx:228  accept:0
+ name: HLT_DoublePhoton80_v7 (229)  idx:229  accept:0
+ name: HLT_L1SingleEG5_v6 (230)  idx:230  accept:0
+ name: HLT_L1SingleEG12_v6 (231)  idx:231  accept:0
+ name: HLT_L1DoubleEG3_FwdVeto_v2 (232)  idx:232  accept:0
+ name: HLT_L1ETM30_v2 (233)  idx:233  accept:0
+ name: HLT_L1ETM40_v2 (234)  idx:234  accept:0
+ name: HLT_L1ETM70_v2 (235)  idx:235  accept:0
+ name: HLT_L1ETM100_v2 (236)  idx:236  accept:0
+ name: HLT_Ele8_CaloIdT_TrkIdVL_v5 (237)  idx:237  accept:0
+ name: HLT_Ele8_CaloIdT_TrkIdVL_EG7_v2 (238)  idx:238  accept:0
+ name: HLT_Ele8_CaloIdT_TrkIdVL_Jet30_v7 (239)  idx:239  accept:0
+ name: HLT_Ele8_CaloIdL_CaloIsoVL_v17 (240)  idx:240  accept:0
+ name: HLT_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v15 (241)  idx:241  accept:0
+ name: HLT_Ele17_CaloIdL_CaloIsoVL_v17 (242)  idx:242  accept:0
+ name: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v6 (243)  idx:243  accept:0
+ name: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v19 (244)  idx:244  accept:0
+ name: HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass50_v6 (245)  idx:245  accept:0
+ name: HLT_Ele20_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC4_Mass50_v7 (246)  idx:246  accept:0
+ name: HLT_Ele22_CaloIdL_CaloIsoVL_v6 (247)  idx:247  accept:0
+ name: HLT_Ele27_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_v11 (248)  idx:248  accept:0
+ name: HLT_Ele27_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele15_CaloIdT_CaloIsoVL_trackless_v8 (249)  idx:249  accept:0
+ name: HLT_Ele27_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_HFT15_v8 (250)  idx:250  accept:0
+ name: HLT_Ele23_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_HFT30_v8 (251)  idx:251  accept:0
+ name: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet30_v4 (252)  idx:252  accept:0
+ name: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet45_35_25_v2 (253)  idx:253  accept:0
+ name: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet50_40_30_v4 (254)  idx:254  accept:0
+ name: HLT_Ele27_WP80_v11 (255)  idx:255  accept:0
+ name: HLT_Ele27_WP80_PFMET_MT50_v7 (256)  idx:256  accept:0
+ name: HLT_Ele30_CaloIdVT_TrkIdT_v6 (257)  idx:257  accept:0
+ name: HLT_Ele32_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_v11 (258)  idx:258  accept:0
+ name: HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_Mass50_v6 (259)  idx:259  accept:0
+ name: HLT_Ele80_CaloIdVT_GsfTrkIdT_v2 (260)  idx:260  accept:0
+ name: HLT_Ele90_CaloIdVT_GsfTrkIdT_v2 (261)  idx:261  accept:0
+ name: HLT_DoubleEle8_CaloIdT_TrkIdVL_v12 (262)  idx:262  accept:0
+ name: HLT_DoubleEle33_CaloIdL_v14 (263)  idx:263  accept:0
+ name: HLT_DoubleEle33_CaloIdL_GsfTrkIdVL_v7 (264)  idx:264  accept:0
+ name: HLT_DoubleEle33_CaloIdT_v10 (265)  idx:265  accept:0
+ name: HLT_Ele15_Ele8_Ele5_CaloIdL_TrkIdVL_v6 (266)  idx:266  accept:0
+ name: HLT_LooseIsoPFTau35_Trk20_Prong1_v10 (267)  idx:267  accept:0
+ name: HLT_LooseIsoPFTau35_Trk20_Prong1_MET70_v10 (268)  idx:268  accept:0
+ name: HLT_LooseIsoPFTau35_Trk20_Prong1_MET75_v10 (269)  idx:269  accept:0
+ name: HLT_IsoMu15_eta2p1_LooseIsoPFTau35_Trk20_Prong1_L1ETM20_v10 (270)  idx:270  accept:0
+ name: HLT_IsoMu8_eta2p1_LooseIsoPFTau20_L1ETM26_v1 (271)  idx:271  accept:0
+ name: HLT_IsoMu8_eta2p1_LooseIsoPFTau20_v1 (272)  idx:272  accept:0
+ name: HLT_Mu8_eta2p1_LooseIsoPFTau20_L1ETM26_v1 (273)  idx:273  accept:0
+ name: HLT_Ele13_eta2p1_WP90Rho_LooseIsoPFTau20_L1ETM36_v1 (274)  idx:274  accept:0
+ name: HLT_Ele13_eta2p1_WP90NoIso_LooseIsoPFTau20_L1ETM36_v1 (275)  idx:275  accept:0
+ name: HLT_Ele13_eta2p1_WP90Rho_LooseIsoPFTau20_v1 (276)  idx:276  accept:0
+ name: HLT_DoubleMediumIsoPFTau30_Trk1_eta2p1_Jet30_v5 (277)  idx:277  accept:0
+ name: HLT_DoubleMediumIsoPFTau30_Trk1_eta2p1_v4 (278)  idx:278  accept:0
+ name: HLT_DoubleMediumIsoPFTau35_Trk1_eta2p1_Prong1_v4 (279)  idx:279  accept:0
+ name: HLT_DoubleMediumIsoPFTau35_Trk1_eta2p1_v4 (280)  idx:280  accept:0
+ name: HLT_IsoMu18_eta2p1_MediumIsoPFTau25_Trk1_eta2p1_v4 (281)  idx:281  accept:0
+ name: HLT_DoubleMediumIsoPFTau30_Trk1_eta2p1_Reg_Jet30_v1 (282)  idx:282  accept:0
+ name: HLT_DoubleMediumIsoPFTau30_Trk1_eta2p1_Reg_v1 (283)  idx:283  accept:0
+ name: HLT_DoubleMediumIsoPFTau35_Trk1_eta2p1_Prong1_Reg_v1 (284)  idx:284  accept:0
+ name: HLT_DoubleMediumIsoPFTau35_Trk1_eta2p1_Reg_v1 (285)  idx:285  accept:0
+ name: HLT_IsoMu18_eta2p1_MediumIsoPFTau25_Trk1_eta2p1_Reg_v1 (286)  idx:286  accept:0
+ name: HLT_DoubleIsoL2Tau30_eta2p1_v1 (287)  idx:287  accept:0
+ name: HLT_BTagMu_DiJet20_Mu5_v6 (288)  idx:288  accept:0
+ name: HLT_BTagMu_DiJet40_Mu5_v6 (289)  idx:289  accept:0
+ name: HLT_BTagMu_DiJet70_Mu5_v6 (290)  idx:290  accept:0
+ name: HLT_BTagMu_DiJet110_Mu5_v6 (291)  idx:291  accept:0
+ name: HLT_BTagMu_Jet300_Mu5_v6 (292)  idx:292  accept:0
+ name: HLT_Mu7_Ele7_CaloIdT_CaloIsoVL_v7 (293)  idx:293  accept:0
+ name: HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v9 (294)  idx:294  accept:0
+ name: HLT_Mu8_DiJet30_v7 (295)  idx:295  accept:0
+ name: HLT_Mu8_TriJet30_v7 (296)  idx:296  accept:0
+ name: HLT_Mu8_QuadJet30_v7 (297)  idx:297  accept:0
+ name: HLT_IsoMu12_DoubleCentralJet65_v4 (298)  idx:298  accept:0
+ name: HLT_Mu15_eta2p1_L1ETM20_v5 (299)  idx:299  accept:0
+ name: HLT_IsoMu18_CentralPFJet30_CentralPFJet25_v1 (300)  idx:300  accept:0
+ name: HLT_IsoMu18_PFJet30_PFJet25_Deta3_v1 (301)  idx:301  accept:0
+ name: HLT_Mu18_CentralPFJet30_CentralPFJet25_v1 (302)  idx:302  accept:0
+ name: HLT_Mu18_PFJet30_PFJet25_Deta3_CentralPFJet25_v1 (303)  idx:303  accept:0
+ name: HLT_IsoMu18_CentralPFJet30_CentralPFJet25_PFMET20_v1 (304)  idx:304  accept:0
+ name: HLT_IsoMu18_PFJet30_PFJet25_Deta3_CentralPFJet25_v1 (305)  idx:305  accept:0
+ name: HLT_Ele24_WP80_CentralPFJet35_CentralPFJet25_v1 (306)  idx:306  accept:0
+ name: HLT_Ele24_WP80_PFJet30_PFJet25_Deta3_v1 (307)  idx:307  accept:0
+ name: HLT_Ele24_WP80_PFJet30_PFJet25_Deta3_CentralPFJet30_v1 (308)  idx:308  accept:0
+ name: HLT_Ele24_WP80_CentralPFJet35_CentralPFJet25_PFMET20_v1 (309)  idx:309  accept:0
+ name: HLT_IsoMu17_eta2p1_CentralPFNoPUJet30_BTagIPIter_v4 (310)  idx:310  accept:0
+ name: HLT_IsoMu17_eta2p1_CentralPFNoPUJet30_v4 (311)  idx:311  accept:0
+ name: HLT_IsoMu17_eta2p1_DiCentralPFNoPUJet30_v4 (312)  idx:312  accept:0
+ name: HLT_IsoMu17_eta2p1_TriCentralPFNoPUJet45_35_25_v2 (313)  idx:313  accept:0
+ name: HLT_IsoMu17_eta2p1_TriCentralPFNoPUJet30_v4 (314)  idx:314  accept:0
+ name: HLT_Mu17_eta2p1_CentralPFNoPUJet30_BTagIPIter_v4 (315)  idx:315  accept:0
+ name: HLT_Mu17_eta2p1_TriCentralPFNoPUJet45_35_25_v2 (316)  idx:316  accept:0
+ name: HLT_IsoMu20_WCandPt80_v4 (317)  idx:317  accept:0
+ name: HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v9 (318)  idx:318  accept:0
+ name: HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v8 (319)  idx:319  accept:0
+ name: HLT_Mu12_eta2p1_DiCentral_40_20_BTagIP3D1stTrack_v8 (320)  idx:320  accept:0
+ name: HLT_Mu12_eta2p1_DiCentral_40_20_v8 (321)  idx:321  accept:0
+ name: HLT_Mu12_eta2p1_DiCentral_20_v8 (322)  idx:322  accept:0
+ name: HLT_Mu15_eta2p1_DiCentral_40_20_v1 (323)  idx:323  accept:0
+ name: HLT_Mu15_eta2p1_DiCentral_20_v1 (324)  idx:324  accept:0
+ name: HLT_Mu15_eta2p1_TriCentral_40_20_20_DiBTagIP3D1stTrack_v8 (325)  idx:325  accept:0
+ name: HLT_Mu15_eta2p1_TriCentral_40_20_20_BTagIP3D1stTrack_v8 (326)  idx:326  accept:0
+ name: HLT_Mu15_eta2p1_TriCentral_40_20_20_v8 (327)  idx:327  accept:0
+ name: HLT_Mu30_Ele30_CaloIdL_v8 (328)  idx:328  accept:0
+ name: HLT_IsoMu17_eta2p1_DiCentralPFNoPUJet30_PFNoPUHT350_PFMHT40_v3 (329)  idx:329  accept:0
+ name: HLT_IsoMu20_eta2p1_CentralPFJet80_v9 (330)  idx:330  accept:0
+ name: HLT_DoubleRelIso1p0Mu5_Mass8_PFNoPUHT175_v4 (331)  idx:331  accept:0
+ name: HLT_DoubleRelIso1p0Mu5_Mass8_PFNoPUHT225_v4 (332)  idx:332  accept:0
+ name: HLT_DoubleMu8_Mass8_PFNoPUHT175_v4 (333)  idx:333  accept:0
+ name: HLT_DoubleMu8_Mass8_PFNoPUHT225_v4 (334)  idx:334  accept:0
+ name: HLT_RelIso1p0Mu5_Ele8_CaloIdT_TrkIdVL_Mass8_PFNoPUHT175_v4 (335)  idx:335  accept:0
+ name: HLT_RelIso1p0Mu5_Ele8_CaloIdT_TrkIdVL_Mass8_PFNoPUHT225_v4 (336)  idx:336  accept:0
+ name: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Mass8_PFNoPUHT175_v4 (337)  idx:337  accept:0
+ name: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Mass8_PFNoPUHT225_v4 (338)  idx:338  accept:0
+ name: HLT_PFNoPUHT350_Mu15_PFMET45_v4 (339)  idx:339  accept:0
+ name: HLT_PFNoPUHT350_Mu15_PFMET50_v4 (340)  idx:340  accept:0
+ name: HLT_PFNoPUHT400_Mu5_PFMET45_v4 (341)  idx:341  accept:0
+ name: HLT_PFNoPUHT400_Mu5_PFMET50_v4 (342)  idx:342  accept:0
+ name: HLT_Mu40_PFNoPUHT350_v4 (343)  idx:343  accept:0
+ name: HLT_Mu60_PFNoPUHT350_v4 (344)  idx:344  accept:0
+ name: HLT_DoubleMu5_Ele8_CaloIdT_TrkIdVL_v16 (345)  idx:345  accept:0
+ name: HLT_DoubleMu8_Ele8_CaloIdT_TrkIdVL_v5 (346)  idx:346  accept:0
+ name: HLT_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Jet30_v7 (347)  idx:347  accept:0
+ name: HLT_Ele8_CaloIdT_TrkIdT_DiJet30_v18 (348)  idx:348  accept:0
+ name: HLT_Ele8_CaloIdT_TrkIdT_TriJet30_v18 (349)  idx:349  accept:0
+ name: HLT_Ele8_CaloIdT_TrkIdT_QuadJet30_v18 (350)  idx:350  accept:0
+ name: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Jet30_v7 (351)  idx:351  accept:0
+ name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_CentralPFNoPUJet30_v8 (352)  idx:352  accept:0
+ name: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_DiCentralPFNoPUJet30_v2 (353)  idx:353  accept:0
+ name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_CentralPFNoPUJet30_BTagIPIter_v9 (354)  idx:354  accept:0
+ name: HLT_Ele27_WP80_CentralPFJet80_v9 (355)  idx:355  accept:0
+ name: HLT_Ele27_WP80_WCandPt80_v9 (356)  idx:356  accept:0
+ name: HLT_Ele30_CaloIdVT_TrkIdT_PFNoPUJet100_PFNoPUJet25_v8 (357)  idx:357  accept:0
+ name: HLT_Ele30_CaloIdVT_TrkIdT_PFNoPUJet150_PFNoPUJet25_v8 (358)  idx:358  accept:0
+ name: HLT_DoubleEle8_CaloIdT_TrkIdVL_Mass8_PFNoPUHT175_v4 (359)  idx:359  accept:0
+ name: HLT_DoubleEle8_CaloIdT_TrkIdVL_Mass8_PFNoPUHT225_v4 (360)  idx:360  accept:0
+ name: HLT_DoubleEle10_CaloIdL_TrkIdVL_Ele10_CaloIdT_TrkIdVL_v12 (361)  idx:361  accept:0
+ name: HLT_TripleEle10_CaloIdL_TrkIdVL_v18 (362)  idx:362  accept:0
+ name: HLT_RsqMR40_Rsq0p04_v6 (363)  idx:363  accept:0
+ name: HLT_RsqMR45_Rsq0p09_v5 (364)  idx:364  accept:0
+ name: HLT_RsqMR55_Rsq0p09_MR150_v6 (365)  idx:365  accept:0
+ name: HLT_RsqMR60_Rsq0p09_MR150_v6 (366)  idx:366  accept:0
+ name: HLT_RsqMR65_Rsq0p09_MR150_v5 (367)  idx:367  accept:0
+ name: HLT_IsoMu12_RsqMR30_Rsq0p04_MR200_v4 (368)  idx:368  accept:0
+ name: HLT_IsoMu12_RsqMR40_Rsq0p04_MR200_v4 (369)  idx:369  accept:0
+ name: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_RsqMR30_Rsq0p04_MR200_v4 (370)  idx:370  accept:0
+ name: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_RsqMR40_Rsq0p04_MR200_v4 (371)  idx:371  accept:0
+ name: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_DoubleCentralJet65_v4 (372)  idx:372  accept:0
+ name: HLT_Photon40_CaloIdL_RsqMR40_Rsq0p09_MR150_v6 (373)  idx:373  accept:0
+ name: HLT_Photon40_CaloIdL_RsqMR45_Rsq0p09_MR150_v6 (374)  idx:374  accept:0
+ name: HLT_Photon40_CaloIdL_RsqMR50_Rsq0p09_MR150_v6 (375)  idx:375  accept:0
+ name: HLT_DoublePhoton40_CaloIdL_Rsq0p035_v6 (376)  idx:376  accept:0
+ name: HLT_DoublePhoton40_CaloIdL_Rsq0p06_v6 (377)  idx:377  accept:0
+ name: HLT_Mu22_Photon22_CaloIdL_v7 (378)  idx:378  accept:0
+ name: HLT_Mu8_DoubleEle8_CaloIdT_TrkIdVL_v7 (379)  idx:379  accept:0
+ name: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Ele8_CaloIdL_TrkIdVL_v7 (380)  idx:380  accept:0
+ name: HLT_DoubleMu14_Mass8_PFMET40_v8 (381)  idx:381  accept:0
+ name: HLT_DoubleMu14_Mass8_PFMET50_v8 (382)  idx:382  accept:0
+ name: HLT_DoubleEle14_CaloIdT_TrkIdVL_Mass8_PFMET40_v8 (383)  idx:383  accept:0
+ name: HLT_DoubleEle14_CaloIdT_TrkIdVL_Mass8_PFMET50_v8 (384)  idx:384  accept:0
+ name: HLT_Mu14_Ele14_CaloIdT_TrkIdVL_Mass8_PFMET40_v8 (385)  idx:385  accept:0
+ name: HLT_Mu14_Ele14_CaloIdT_TrkIdVL_Mass8_PFMET50_v8 (386)  idx:386  accept:0
+ name: HLT_PFNoPUHT350_PFMET100_v4 (387)  idx:387  accept:0
+ name: HLT_PFNoPUHT400_PFMET100_v4 (388)  idx:388  accept:0
+ name: HLT_CleanPFNoPUHT350_Ele5_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET45_v3 (389)  idx:389  accept:0
+ name: HLT_CleanPFNoPUHT350_Ele5_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET50_v3 (390)  idx:390  accept:0
+ name: HLT_CleanPFNoPUHT300_Ele15_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET45_v3 (391)  idx:391  accept:0
+ name: HLT_CleanPFNoPUHT300_Ele15_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET50_v3 (392)  idx:392  accept:0
+ name: HLT_CleanPFNoPUHT300_Ele40_CaloIdVT_TrkIdT_v3 (393)  idx:393  accept:0
+ name: HLT_CleanPFNoPUHT300_Ele60_CaloIdVT_TrkIdT_v3 (394)  idx:394  accept:0
+ name: HLT_Ele5_SC5_Jpsi_Mass2to15_v4 (395)  idx:395  accept:0
+ name: HLT_DiJet20_MJJ650_AllJets_DEta3p5_HT120_VBF_v1 (396)  idx:396  accept:0
+ name: HLT_DiJet30_MJJ700_AllJets_DEta3p5_VBF_v1 (397)  idx:397  accept:0
+ name: HLT_DiJet35_MJJ650_AllJets_DEta3p5_VBF_v5 (398)  idx:398  accept:0
+ name: HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBF_v5 (399)  idx:399  accept:0
+ name: HLT_DiJet35_MJJ750_AllJets_DEta3p5_VBF_v5 (400)  idx:400  accept:0
+ name: HLT_Ele22_eta2p1_WP90Rho_LooseIsoPFTau20_v7 (401)  idx:401  accept:0
+ name: HLT_Ele22_eta2p1_WP90NoIso_LooseIsoPFTau20_v7 (402)  idx:402  accept:0
+ name: HLT_IsoMu17_eta2p1_LooseIsoPFTau20_v7 (403)  idx:403  accept:0
+ name: HLT_Mu17_eta2p1_LooseIsoPFTau20_v7 (404)  idx:404  accept:0
+ name: HLT_PixelTracks_Multiplicity70_v3 (405)  idx:405  accept:0
+ name: HLT_PixelTracks_Multiplicity80_v12 (406)  idx:406  accept:0
+ name: HLT_PixelTracks_Multiplicity90_v3 (407)  idx:407  accept:0
+ name: DST_HT250_v4 (408)  idx:408  accept:1
+ name: DST_L1HTT_Or_L1MultiJet_v4 (409)  idx:409  accept:0
+ name: DST_Mu5_HT250_v4 (410)  idx:410  accept:0
+ name: DST_Ele8_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_HT250_v4 (411)  idx:411  accept:0
+ name: HLT_BeamGas_HF_Beam1_v5 (412)  idx:412  accept:0
+ name: HLT_BeamGas_HF_Beam2_v5 (413)  idx:413  accept:0
+ name: HLT_BeamHalo_v13 (414)  idx:414  accept:0
+ name: HLT_HcalUTCA_v1 (415)  idx:415  accept:0
+ name: HLT_IsoTrackHE_v15 (416)  idx:416  accept:0
+ name: HLT_IsoTrackHB_v14 (417)  idx:417  accept:0
+ name: HLT_HcalPhiSym_v11 (418)  idx:418  accept:0
+ name: HLT_HcalNZS_v10 (419)  idx:419  accept:0
+ name: HLT_GlobalRunHPDNoise_v8 (420)  idx:420  accept:0
+ name: HLT_L1Tech_HBHEHO_totalOR_v6 (421)  idx:421  accept:0
+ name: HLT_L1Tech_HCAL_HF_single_channel_v4 (422)  idx:422  accept:0
+ name: HLT_ZeroBias_v7 (423)  idx:423  accept:0
+ name: HLT_ZeroBias_Parked_v1 (424)  idx:424  accept:0
+ name: HLT_ZeroBiasPixel_DoubleTrack_v2 (425)  idx:425  accept:0
+ name: HLT_Physics_v5 (426)  idx:426  accept:0
+ name: HLT_Physics_Parked_v1 (427)  idx:427  accept:0
+ name: DST_Physics_v5 (428)  idx:428  accept:0
+ name: HLT_DTCalibration_v2 (429)  idx:429  accept:0
+ name: HLT_EcalCalibration_v3 (430)  idx:430  accept:0
+ name: HLT_HcalCalibration_v3 (431)  idx:431  accept:0
+ name: HLT_TrackerCalibration_v3 (432)  idx:432  accept:0
+ name: HLT_Random_v2 (433)  idx:433  accept:0
+ name: HLT_L1SingleMuOpen_AntiBPTX_v7 (434)  idx:434  accept:0
+ name: HLT_L1TrackerCosmics_v7 (435)  idx:435  accept:0
+ name: HLT_DTErrors_v3 (436)  idx:436  accept:0
+ name: HLT_L1DoubleJet36Central_v7 (437)  idx:437  accept:0
+ name: AlCa_EcalPi0EBonly_v6 (438)  idx:438  accept:0
+ name: AlCa_EcalPi0EEonly_v6 (439)  idx:439  accept:0
+ name: AlCa_EcalEtaEBonly_v6 (440)  idx:440  accept:0
+ name: AlCa_EcalEtaEEonly_v6 (441)  idx:441  accept:0
+ name: AlCa_EcalPhiSym_v13 (442)  idx:442  accept:0
+ name: AlCa_RPCMuonNoTriggers_v9 (443)  idx:443  accept:0
+ name: AlCa_RPCMuonNoHits_v9 (444)  idx:444  accept:0
+ name: AlCa_RPCMuonNormalisation_v9 (445)  idx:445  accept:0
+ name: AlCa_LumiPixels_v8 (446)  idx:446  accept:0
+ name: AlCa_LumiPixels_ZeroBias_v4 (447)  idx:447  accept:0
+ name: AlCa_LumiPixels_Random_v1 (448)  idx:448  accept:0
+ name: DQM_FEDIntegrity_v11 (449)  idx:449  accept:0
+ name: HLT_LogMonitor_v4 (450)  idx:450  accept:0
+ name: HLTriggerFinalPath (451)  idx:451  accept:1
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+--- DataSetInfo              : Added class "data"	 with internal class number 0
+Begin processing the 1001st record. Run 207279, Event 494502269, LumiSection 334 at 13-Aug-2013 11:37:59.735 CEST
+Begin processing the 2001st record. Run 207279, Event 530120382, LumiSection 358 at 13-Aug-2013 11:45:14.521 CEST
+Begin processing the 3001st record. Run 207279, Event 545298362, LumiSection 369 at 13-Aug-2013 11:51:25.032 CEST
+13-Aug-2013 11:52:42 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/C2E149D0-B165-E211-AD41-001E67396DEC.root
+13-Aug-2013 11:52:42 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/BEC003E3-B965-E211-BD90-F04DA23BCE4C.root
+13-Aug-2013 11:52:42 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/BEC003E3-B965-E211-BD90-F04DA23BCE4C.root
+Begin processing the 4001st record. Run 208429, Event 119441990, LumiSection 104 at 13-Aug-2013 11:57:25.640 CEST
+Begin processing the 5001st record. Run 208429, Event 295067639, LumiSection 268 at 13-Aug-2013 12:03:45.579 CEST
+Begin processing the 6001st record. Run 208429, Event 313837279, LumiSection 286 at 13-Aug-2013 12:10:33.135 CEST
+Begin processing the 7001st record. Run 208429, Event 324322953, LumiSection 297 at 13-Aug-2013 12:17:29.227 CEST
+13-Aug-2013 12:19:14 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/BEC003E3-B965-E211-BD90-F04DA23BCE4C.root
+13-Aug-2013 12:19:14 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/BEC9B028-B465-E211-A480-003048D46048.root
+13-Aug-2013 12:19:14 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/BEC9B028-B465-E211-A480-003048D46048.root
+Begin processing the 8001st record. Run 207924, Event 311084966, LumiSection 327 at 13-Aug-2013 12:23:06.222 CEST
+Begin processing the 9001st record. Run 207924, Event 346369857, LumiSection 367 at 13-Aug-2013 12:29:19.072 CEST
+Begin processing the 10001st record. Run 207924, Event 361412663, LumiSection 385 at 13-Aug-2013 12:34:13.672 CEST
+Begin processing the 11001st record. Run 207924, Event 370889677, LumiSection 396 at 13-Aug-2013 12:41:16.672 CEST
+13-Aug-2013 12:48:15 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/BEC9B028-B465-E211-A480-003048D46048.root
+13-Aug-2013 12:48:15 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/C00A3325-9D65-E211-A705-001E67397F8F.root
+13-Aug-2013 12:48:15 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/C00A3325-9D65-E211-A705-001E67397F8F.root
+Begin processing the 12001st record. Run 206542, Event 273677787, LumiSection 152 at 13-Aug-2013 12:48:50.507 CEST
+Begin processing the 13001st record. Run 206542, Event 293571632, LumiSection 163 at 13-Aug-2013 13:00:30.143 CEST
+Begin processing the 14001st record. Run 206542, Event 766614664, LumiSection 492 at 13-Aug-2013 13:09:15.639 CEST
+Begin processing the 15001st record. Run 206542, Event 878601828, LumiSection 585 at 13-Aug-2013 13:15:11.156 CEST
+13-Aug-2013 13:15:29 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/C00A3325-9D65-E211-A705-001E67397F8F.root
+13-Aug-2013 13:15:29 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/767E3EAE-A265-E211-93BC-001E67397D73.root
+13-Aug-2013 13:15:29 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/767E3EAE-A265-E211-93BC-001E67397D73.root
+Begin processing the 16001st record. Run 204545, Event 251670501, LumiSection 230 at 13-Aug-2013 13:18:44.113 CEST
+Begin processing the 17001st record. Run 204545, Event 255361377, LumiSection 233 at 13-Aug-2013 13:21:46.583 CEST
+Begin processing the 18001st record. Run 204545, Event 256157504, LumiSection 234 at 13-Aug-2013 13:24:50.845 CEST
+Begin processing the 19001st record. Run 204545, Event 258583720, LumiSection 236 at 13-Aug-2013 13:27:53.912 CEST
+13-Aug-2013 13:30:37 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/767E3EAE-A265-E211-93BC-001E67397D73.root
+13-Aug-2013 13:30:37 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/76894D95-B565-E211-B2D9-002590200B3C.root
+13-Aug-2013 13:30:37 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/76894D95-B565-E211-B2D9-002590200B3C.root
+Begin processing the 20001st record. Run 207920, Event 486483770, LumiSection 322 at 13-Aug-2013 13:31:20.331 CEST
+Begin processing the 21001st record. Run 207920, Event 500577363, LumiSection 331 at 13-Aug-2013 13:36:48.013 CEST
+Begin processing the 22001st record. Run 207920, Event 510840072, LumiSection 338 at 13-Aug-2013 13:42:20.291 CEST
+13-Aug-2013 13:47:03 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/76894D95-B565-E211-B2D9-002590200B3C.root
+13-Aug-2013 13:47:03 CEST  Initiating request to open file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/76AA1E8D-9965-E211-8674-001E67398C05.root
+13-Aug-2013 13:47:03 CEST  Successfully opened file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/76AA1E8D-9965-E211-8674-001E67398C05.root
+Begin processing the 23001st record. Run 208307, Event 472003832, LumiSection 306 at 13-Aug-2013 13:47:49.521 CEST
+Begin processing the 24001st record. Run 208307, Event 585017177, LumiSection 394 at 13-Aug-2013 13:53:23.812 CEST
+Begin processing the 25001st record. Run 208307, Event 786916298, LumiSection 568 at 13-Aug-2013 14:01:02.118 CEST
+Begin processing the 26001st record. Run 208339, Event 288624171, LumiSection 218 at 13-Aug-2013 14:06:48.673 CEST
+13-Aug-2013 14:07:07 CEST  Closed file dcap://maite.iihe.ac.be/pnfs/iihe/cms/ph/sc4/store/data/Run2012D/SinglePhoton/RECO/EXODisplacedPhoton-19Dec2012-v1/10000/76AA1E8D-9965-E211-8674-001E67398C05.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 26054 passed = 26054 failed = 0
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#        Run     Passed     Failed      Error Name
+TrigReport     1    0      26054      26054          0          0 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#        Run     Passed     Failed      Error Name
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0      26054      26054          0          0 uncleanSCRecovered
+TrigReport     1    0      26054      26054          0          0 myphotonCores
+TrigReport     1    0      26054      26054          0          0 myphotons
+TrigReport     1    0      26054      26054          0          0 PhotonIDProd
+TrigReport     1    0      26054      26054          0          0 pfPileUpPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoPileUpPFlow
+TrigReport     1    0      26054      26054          0          0 pfPileUpIsoPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoPileUpIsoPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllNeutralHadronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllChargedHadronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllPhotonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllChargedParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 pfPileUpAllChargedParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllNeutralHadronsAndPhotonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfSelectedPhotonsPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoDepositChargedPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoDepositChargedAllPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoDepositGammaPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoDepositNeutralPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoDepositPUPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueCharged03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueChargedAll03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueGamma03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueNeutral03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValuePU03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueCharged04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueChargedAll04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueGamma04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValueNeutral04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 phPFIsoValuePU04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 pfIsolatedPhotonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfMuonsFromVertexPFlow
+TrigReport     1    0      26054      26054          0          0 pfSelectedMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoDepositChargedPFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoDepositChargedAllPFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoDepositGammaPFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoDepositNeutralPFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoDepositPUPFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueCharged03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueChargedAll03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueGamma03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueNeutral03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueGammaHighThreshold03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueNeutralHighThreshold03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValuePU03PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueCharged04PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueChargedAll04PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueGamma04PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueNeutral04PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueGammaHighThreshold04PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValueNeutralHighThreshold04PFlow
+TrigReport     1    0      26054      26054          0          0 muPFIsoValuePU04PFlow
+TrigReport     1    0      26054      26054          0          0 pfIsolatedMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoMuonPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfElectronsFromVertexPFlow
+TrigReport     1    0      26054      26054          0          0 pfSelectedElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoDepositChargedPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoDepositChargedAllPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoDepositGammaPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoDepositNeutralPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoDepositPUPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueCharged03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueChargedAll03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueGamma03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueNeutral03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValuePU03PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueCharged04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueChargedAll04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueGamma04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueNeutral04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValuePU04PFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueCharged03NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueChargedAll03NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueGamma03NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueNeutral03NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValuePU03NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueCharged04NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueChargedAll04NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueGamma04NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValueNeutral04NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 elPFIsoValuePU04NoPFIdPFlow
+TrigReport     1    0      26054      26054          0          0 pfIsolatedElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoElectronPFlow
+TrigReport     1    0      26054      26054          0          0 pfJetsPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoJetPFlow
+TrigReport     1    0      26054      26054          0          0 pfJetTracksAssociatorAtVertexPFlow
+TrigReport     1    0      26054      26054          0          0 pfTauPFJets08RegionPFlow
+TrigReport     1    0      26054      26054          0          0 pfTauPileUpVerticesPFlow
+TrigReport     1    0      26054      26054          0          0 pfTauTagInfoProducerPFlow
+TrigReport     1    0      26054      26054          0          0 pfJetsPiZerosPFlow
+TrigReport     1    0      26054      26054          0          0 pfJetsLegacyTaNCPiZerosPFlow
+TrigReport     1    0      26054      26054          0          0 pfJetsLegacyHPSPiZerosPFlow
+TrigReport     1    0      26054      26054          0          0 pfTausBasePFlow
+TrigReport     1    0      26054      26054          0          0 hpsSelectionDiscriminatorPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauProducerSansRefsPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauProducerPFlow
+TrigReport     1    0      26054      26054          0          0 pfTausBaseDiscriminationByDecayModeFindingPFlow
+TrigReport     1    0      26054      26054          0          0 pfTausBaseDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 pfTausPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoTauPFlow
+TrigReport     1    0      26054      26054          0          0 pfMETPFlow
+TrigReport     1    0      26054      26054          0          0 patElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 patMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfPileUpIsoPFlow
+TrigReport     1    0      26054      26054          0          0 pfNoPileUpIsoPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllNeutralHadronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllChargedHadronsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllPhotonsPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllChargedParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 pfPileUpAllChargedParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 pfAllNeutralHadronsAndPhotonsPFlow
+TrigReport     1    0      26054      26054          0          0 tauIsoDepositPFCandidatesPFlow
+TrigReport     1    0      26054      26054          0          0 tauIsoDepositPFChargedHadronsPFlow
+TrigReport     1    0      26054      26054          0          0 tauIsoDepositPFNeutralHadronsPFlow
+TrigReport     1    0      26054      26054          0          0 tauIsoDepositPFGammasPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByDecayModeFindingPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByVLooseChargedIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByLooseChargedIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMediumChargedIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByTightChargedIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByVLooseIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByLooseIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMediumIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByTightIsolationPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByVLooseIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByLooseIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMediumIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByTightIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByRawChargedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByRawGammaIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByVLooseCombinedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorrPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByLooseElectronRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMediumElectronRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByTightElectronRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMVAElectronRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByLooseMuonRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByMediumMuonRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 hpsPFTauDiscriminationByTightMuonRejectionPFlow
+TrigReport     1    0      26054      26054          0          0 patTausPFlow
+TrigReport     1    0      26054      26054          0          0 patJetCorrFactorsPFlow
+TrigReport     1    0      26054      26054          0          0 jetTracksAssociatorAtVertexPFlow
+TrigReport     1    0      26054      26054          0          0 impactParameterTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 secondaryVertexTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 softMuonTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 secondaryVertexNegativeTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 secondaryVertexNegativeTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 inclusiveVertexFinder
+TrigReport     1    0      26054      26054          0          0 vertexMerger
+TrigReport     1    0      26054      26054          0          0 trackVertexArbitrator
+TrigReport     1    0      26054      26054          0          0 inclusiveMergedVertices
+TrigReport     1    0      26054      26054          0          0 inclusiveSecondaryVertexFinderTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 softElectronCands
+TrigReport     1    0      26054      26054          0          0 softElectronTagInfosAODPFlow
+TrigReport     1    0      26054      26054          0          0 jetBProbabilityBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 jetProbabilityBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 trackCountingHighPurBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 trackCountingHighEffBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 simpleSecondaryVertexHighEffBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 simpleSecondaryVertexHighPurBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 combinedSecondaryVertexBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 combinedSecondaryVertexMVABJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 softMuonBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 softMuonByPtBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 softMuonByIP3dBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 simpleSecondaryVertexNegativeHighEffBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 simpleSecondaryVertexNegativeHighPurBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 negativeTrackCountingHighEffJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 negativeTrackCountingHighPurJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 combinedInclusiveSecondaryVertexBJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 combinedMVABJetTagsAODPFlow
+TrigReport     1    0      26054      26054          0          0 patJetChargePFlow
+TrigReport     1    0      26054      26054          0          0 patJetsPFlow
+TrigReport     1    0      26054      26054          0          0 patMETsPFlow
+TrigReport     1    0      26054      26054          0          0 patPFParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 patCandidateSummaryPFlow
+TrigReport     1    0      26054      26054          0          0 selectedPatElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 selectedPatMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 selectedPatTausPFlow
+TrigReport     1    0      26054      26054          0          0 selectedPatJetsPFlow
+TrigReport     1    0      26054      26054          0          0 selectedPatPFParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 selectedPatCandidateSummaryPFlow
+TrigReport     1    0      26054      26054          0          0 countPatElectronsPFlow
+TrigReport     1    0      26054      26054          0          0 countPatMuonsPFlow
+TrigReport     1    0      26054      26054          0          0 countPatTausPFlow
+TrigReport     1    0      26054      26054          0          0 countPatLeptonsPFlow
+TrigReport     1    0      26054      26054          0          0 countPatJetsPFlow
+TrigReport     1    0      26054      26054          0          0 countPatPFParticlesPFlow
+TrigReport     1    0      26054      26054          0          0 pfCandsNotInJet
+TrigReport     1    0      26054      26054          0          0 pfJetMETcorr
+TrigReport     1    0      26054      26054          0          0 pfCandMETcorr
+TrigReport     1    0      26054      26054          0          0 pfchsMETcorr
+TrigReport     1    0      26054      26054          0          0 pfType1CorrectedMet
+TrigReport     1    0      26054      26054          0          0 pfType1p2CorrectedMet
+TrigReport     1    0      26054      26054          0          0 ana
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited        Run     Passed     Failed      Error Name
+TrigReport      26054      26054      26054          0          0 uncleanSCRecovered
+TrigReport      26054      26054      26054          0          0 myphotonCores
+TrigReport      26054      26054      26054          0          0 myphotons
+TrigReport      26054      26054      26054          0          0 PhotonIDProd
+TrigReport      26054      26054      26054          0          0 pfPileUpPFlow
+TrigReport      26054      26054      26054          0          0 pfNoPileUpPFlow
+TrigReport      52108      26054      26054          0          0 pfPileUpIsoPFlow
+TrigReport      52108      26054      26054          0          0 pfNoPileUpIsoPFlow
+TrigReport      52108      26054      26054          0          0 pfAllNeutralHadronsPFlow
+TrigReport      52108      26054      26054          0          0 pfAllChargedHadronsPFlow
+TrigReport      52108      26054      26054          0          0 pfAllPhotonsPFlow
+TrigReport      52108      26054      26054          0          0 pfAllChargedParticlesPFlow
+TrigReport      52108      26054      26054          0          0 pfPileUpAllChargedParticlesPFlow
+TrigReport      52108      26054      26054          0          0 pfAllNeutralHadronsAndPhotonsPFlow
+TrigReport      26054      26054      26054          0          0 pfSelectedPhotonsPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoDepositChargedPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoDepositChargedAllPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoDepositGammaPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoDepositNeutralPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoDepositPUPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueCharged03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueChargedAll03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueGamma03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueNeutral03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValuePU03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueCharged04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueChargedAll04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueGamma04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValueNeutral04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 phPFIsoValuePU04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 pfIsolatedPhotonsPFlow
+TrigReport      26054      26054      26054          0          0 pfAllMuonsPFlow
+TrigReport      26054      26054      26054          0          0 pfMuonsFromVertexPFlow
+TrigReport      26054      26054      26054          0          0 pfSelectedMuonsPFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoDepositChargedPFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoDepositChargedAllPFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoDepositGammaPFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoDepositNeutralPFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoDepositPUPFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueCharged03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueChargedAll03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueGamma03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueNeutral03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueGammaHighThreshold03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueNeutralHighThreshold03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValuePU03PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueCharged04PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueChargedAll04PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueGamma04PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueNeutral04PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueGammaHighThreshold04PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValueNeutralHighThreshold04PFlow
+TrigReport      26054      26054      26054          0          0 muPFIsoValuePU04PFlow
+TrigReport      26054      26054      26054          0          0 pfIsolatedMuonsPFlow
+TrigReport      26054      26054      26054          0          0 pfMuonsPFlow
+TrigReport      26054      26054      26054          0          0 pfNoMuonPFlow
+TrigReport      26054      26054      26054          0          0 pfAllElectronsPFlow
+TrigReport      26054      26054      26054          0          0 pfElectronsFromVertexPFlow
+TrigReport      26054      26054      26054          0          0 pfSelectedElectronsPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoDepositChargedPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoDepositChargedAllPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoDepositGammaPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoDepositNeutralPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoDepositPUPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueCharged03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueChargedAll03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueGamma03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueNeutral03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValuePU03PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueCharged04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueChargedAll04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueGamma04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueNeutral04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValuePU04PFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueCharged03NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueChargedAll03NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueGamma03NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueNeutral03NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValuePU03NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueCharged04NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueChargedAll04NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueGamma04NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValueNeutral04NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 elPFIsoValuePU04NoPFIdPFlow
+TrigReport      26054      26054      26054          0          0 pfIsolatedElectronsPFlow
+TrigReport      26054      26054      26054          0          0 pfElectronsPFlow
+TrigReport      26054      26054      26054          0          0 pfNoElectronPFlow
+TrigReport      26054      26054      26054          0          0 pfJetsPFlow
+TrigReport      26054      26054      26054          0          0 pfNoJetPFlow
+TrigReport      26054      26054      26054          0          0 pfJetTracksAssociatorAtVertexPFlow
+TrigReport      26054      26054      26054          0          0 pfTauPFJets08RegionPFlow
+TrigReport      26054      26054      26054          0          0 pfTauPileUpVerticesPFlow
+TrigReport      26054      26054      26054          0          0 pfTauTagInfoProducerPFlow
+TrigReport      26054      26054      26054          0          0 pfJetsPiZerosPFlow
+TrigReport      26054      26054      26054          0          0 pfJetsLegacyTaNCPiZerosPFlow
+TrigReport      26054      26054      26054          0          0 pfJetsLegacyHPSPiZerosPFlow
+TrigReport      26054      26054      26054          0          0 pfTausBasePFlow
+TrigReport      26054      26054      26054          0          0 hpsSelectionDiscriminatorPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauProducerSansRefsPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauProducerPFlow
+TrigReport      26054      26054      26054          0          0 pfTausBaseDiscriminationByDecayModeFindingPFlow
+TrigReport      26054      26054      26054          0          0 pfTausBaseDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 pfTausPFlow
+TrigReport      26054      26054      26054          0          0 pfNoTauPFlow
+TrigReport      26054      26054      26054          0          0 pfMETPFlow
+TrigReport      26054      26054      26054          0          0 patElectronsPFlow
+TrigReport      26054      26054      26054          0          0 patMuonsPFlow
+TrigReport      26054      26054      26054          0          0 tauIsoDepositPFCandidatesPFlow
+TrigReport      26054      26054      26054          0          0 tauIsoDepositPFChargedHadronsPFlow
+TrigReport      26054      26054      26054          0          0 tauIsoDepositPFNeutralHadronsPFlow
+TrigReport      26054      26054      26054          0          0 tauIsoDepositPFGammasPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByDecayModeFindingPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByVLooseChargedIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByLooseChargedIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMediumChargedIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByTightChargedIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByVLooseIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByLooseIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMediumIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByTightIsolationPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByVLooseIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByLooseIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMediumIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByTightIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByRawChargedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByRawGammaIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByVLooseCombinedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorrPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByLooseElectronRejectionPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMediumElectronRejectionPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByTightElectronRejectionPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMVAElectronRejectionPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByLooseMuonRejectionPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByMediumMuonRejectionPFlow
+TrigReport      26054      26054      26054          0          0 hpsPFTauDiscriminationByTightMuonRejectionPFlow
+TrigReport      26054      26054      26054          0          0 patTausPFlow
+TrigReport      26054      26054      26054          0          0 patJetCorrFactorsPFlow
+TrigReport      26054      26054      26054          0          0 jetTracksAssociatorAtVertexPFlow
+TrigReport      26054      26054      26054          0          0 impactParameterTagInfosAODPFlow
+TrigReport      26054      26054      26054          0          0 secondaryVertexTagInfosAODPFlow
+TrigReport      26054      26054      26054          0          0 softMuonTagInfosAODPFlow
+TrigReport      52108      26054      26054          0          0 secondaryVertexNegativeTagInfosAODPFlow
+TrigReport      26054      26054      26054          0          0 inclusiveVertexFinder
+TrigReport      26054      26054      26054          0          0 vertexMerger
+TrigReport      26054      26054      26054          0          0 trackVertexArbitrator
+TrigReport      26054      26054      26054          0          0 inclusiveMergedVertices
+TrigReport      26054      26054      26054          0          0 inclusiveSecondaryVertexFinderTagInfosAODPFlow
+TrigReport      26054      26054      26054          0          0 softElectronCands
+TrigReport      26054      26054      26054          0          0 softElectronTagInfosAODPFlow
+TrigReport      26054      26054      26054          0          0 jetBProbabilityBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 jetProbabilityBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 trackCountingHighPurBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 trackCountingHighEffBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 simpleSecondaryVertexHighEffBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 simpleSecondaryVertexHighPurBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 combinedSecondaryVertexBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 combinedSecondaryVertexMVABJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 softMuonBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 softMuonByPtBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 softMuonByIP3dBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 simpleSecondaryVertexNegativeHighEffBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 simpleSecondaryVertexNegativeHighPurBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 negativeTrackCountingHighEffJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 negativeTrackCountingHighPurJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 combinedInclusiveSecondaryVertexBJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 combinedMVABJetTagsAODPFlow
+TrigReport      26054      26054      26054          0          0 patJetChargePFlow
+TrigReport      26054      26054      26054          0          0 patJetsPFlow
+TrigReport      26054      26054      26054          0          0 patMETsPFlow
+TrigReport      26054      26054      26054          0          0 patPFParticlesPFlow
+TrigReport      26054      26054      26054          0          0 patCandidateSummaryPFlow
+TrigReport      26054      26054      26054          0          0 selectedPatElectronsPFlow
+TrigReport      26054      26054      26054          0          0 selectedPatMuonsPFlow
+TrigReport      26054      26054      26054          0          0 selectedPatTausPFlow
+TrigReport      26054      26054      26054          0          0 selectedPatJetsPFlow
+TrigReport      26054      26054      26054          0          0 selectedPatPFParticlesPFlow
+TrigReport      26054      26054      26054          0          0 selectedPatCandidateSummaryPFlow
+TrigReport      26054      26054      26054          0          0 countPatElectronsPFlow
+TrigReport      26054      26054      26054          0          0 countPatMuonsPFlow
+TrigReport      26054      26054      26054          0          0 countPatTausPFlow
+TrigReport      26054      26054      26054          0          0 countPatLeptonsPFlow
+TrigReport      26054      26054      26054          0          0 countPatJetsPFlow
+TrigReport      26054      26054      26054          0          0 countPatPFParticlesPFlow
+TrigReport      26054      26054      26054          0          0 pfCandsNotInJet
+TrigReport      26054      26054      26054          0          0 pfJetMETcorr
+TrigReport      26054      26054      26054          0          0 pfCandMETcorr
+TrigReport      26054      26054      26054          0          0 pfchsMETcorr
+TrigReport      26054      26054      26054          0          0 pfType1CorrectedMet
+TrigReport      26054      26054      26054          0          0 pfType1p2CorrectedMet
+TrigReport      26054      26054      26054          0          0 ana
+TrigReport      26054      26054      26054          0          0 TriggerResults
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport CPU/event = 0.253398 Real/event = 0.345697
+
+TimeReport ---------- Path   Summary ---[sec]----
+TimeReport             per event          per path-run 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport   0.253347   0.345644   0.253347   0.345644 p
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event          per path-run 
+
+TimeReport -------End-Path   Summary ---[sec]----
+TimeReport             per event       per endpath-run 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event       per endpath-run 
+
+TimeReport ---------- Modules in Path: p ---[sec]----
+TimeReport             per event      per module-visit 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport   0.000426   0.000918   0.000426   0.000918 uncleanSCRecovered
+TimeReport   0.000470   0.000716   0.000470   0.000716 myphotonCores
+TimeReport   0.019411   0.028083   0.019411   0.028083 myphotons
+TimeReport   0.000051   0.000061   0.000051   0.000061 PhotonIDProd
+TimeReport   0.007891   0.011034   0.007891   0.011034 pfPileUpPFlow
+TimeReport   0.001084   0.001536   0.001084   0.001536 pfNoPileUpPFlow
+TimeReport   0.002654   0.003701   0.002654   0.003701 pfPileUpIsoPFlow
+TimeReport   0.001080   0.001536   0.001080   0.001536 pfNoPileUpIsoPFlow
+TimeReport   0.000145   0.000183   0.000145   0.000183 pfAllNeutralHadronsPFlow
+TimeReport   0.000251   0.000301   0.000251   0.000301 pfAllChargedHadronsPFlow
+TimeReport   0.000452   0.000687   0.000452   0.000687 pfAllPhotonsPFlow
+TimeReport   0.000265   0.000345   0.000265   0.000345 pfAllChargedParticlesPFlow
+TimeReport   0.000754   0.001057   0.000754   0.001057 pfPileUpAllChargedParticlesPFlow
+TimeReport   0.000572   0.000802   0.000572   0.000802 pfAllNeutralHadronsAndPhotonsPFlow
+TimeReport   0.000049   0.000058   0.000049   0.000058 pfSelectedPhotonsPFlow
+TimeReport   0.000123   0.000163   0.000123   0.000163 phPFIsoDepositChargedPFlow
+TimeReport   0.000048   0.000077   0.000048   0.000077 phPFIsoDepositChargedAllPFlow
+TimeReport   0.000062   0.000104   0.000062   0.000104 phPFIsoDepositGammaPFlow
+TimeReport   0.000036   0.000045   0.000036   0.000045 phPFIsoDepositNeutralPFlow
+TimeReport   0.000075   0.000104   0.000075   0.000104 phPFIsoDepositPUPFlow
+TimeReport   0.000033   0.000048   0.000033   0.000048 phPFIsoValueCharged03PFIdPFlow
+TimeReport   0.000019   0.000026   0.000019   0.000026 phPFIsoValueChargedAll03PFIdPFlow
+TimeReport   0.000019   0.000021   0.000019   0.000021 phPFIsoValueGamma03PFIdPFlow
+TimeReport   0.000020   0.000022   0.000020   0.000022 phPFIsoValueNeutral03PFIdPFlow
+TimeReport   0.000020   0.000023   0.000020   0.000023 phPFIsoValuePU03PFIdPFlow
+TimeReport   0.000019   0.000023   0.000019   0.000023 phPFIsoValueCharged04PFIdPFlow
+TimeReport   0.000019   0.000019   0.000019   0.000019 phPFIsoValueChargedAll04PFIdPFlow
+TimeReport   0.000019   0.000027   0.000019   0.000027 phPFIsoValueGamma04PFIdPFlow
+TimeReport   0.000017   0.000028   0.000017   0.000028 phPFIsoValueNeutral04PFIdPFlow
+TimeReport   0.000019   0.000053   0.000019   0.000053 phPFIsoValuePU04PFIdPFlow
+TimeReport   0.000023   0.000024   0.000023   0.000024 pfIsolatedPhotonsPFlow
+TimeReport   0.000052   0.000079   0.000052   0.000079 pfAllMuonsPFlow
+TimeReport   0.000016   0.000025   0.000016   0.000025 pfMuonsFromVertexPFlow
+TimeReport   0.000011   0.000011   0.000011   0.000011 pfSelectedMuonsPFlow
+TimeReport   0.000025   0.000037   0.000025   0.000037 muPFIsoDepositChargedPFlow
+TimeReport   0.000020   0.000025   0.000020   0.000025 muPFIsoDepositChargedAllPFlow
+TimeReport   0.000018   0.000021   0.000018   0.000021 muPFIsoDepositGammaPFlow
+TimeReport   0.000017   0.000020   0.000017   0.000020 muPFIsoDepositNeutralPFlow
+TimeReport   0.000019   0.000025   0.000019   0.000025 muPFIsoDepositPUPFlow
+TimeReport   0.000014   0.000016   0.000014   0.000016 muPFIsoValueCharged03PFlow
+TimeReport   0.000012   0.000014   0.000012   0.000014 muPFIsoValueChargedAll03PFlow
+TimeReport   0.000013   0.000013   0.000013   0.000013 muPFIsoValueGamma03PFlow
+TimeReport   0.000014   0.000014   0.000014   0.000014 muPFIsoValueNeutral03PFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013 muPFIsoValueGammaHighThreshold03PFlow
+TimeReport   0.000011   0.000014   0.000011   0.000014 muPFIsoValueNeutralHighThreshold03PFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013 muPFIsoValuePU03PFlow
+TimeReport   0.000011   0.000019   0.000011   0.000019 muPFIsoValueCharged04PFlow
+TimeReport   0.000010   0.000041   0.000010   0.000041 muPFIsoValueChargedAll04PFlow
+TimeReport   0.000012   0.000012   0.000012   0.000012 muPFIsoValueGamma04PFlow
+TimeReport   0.000012   0.000016   0.000012   0.000016 muPFIsoValueNeutral04PFlow
+TimeReport   0.000011   0.000013   0.000011   0.000013 muPFIsoValueGammaHighThreshold04PFlow
+TimeReport   0.000010   0.000012   0.000010   0.000012 muPFIsoValueNeutralHighThreshold04PFlow
+TimeReport   0.000010   0.000011   0.000010   0.000011 muPFIsoValuePU04PFlow
+TimeReport   0.000014   0.000015   0.000014   0.000015 pfIsolatedMuonsPFlow
+TimeReport   0.000011   0.000019   0.000011   0.000019 pfMuonsPFlow
+TimeReport   0.001097   0.001419   0.001097   0.001419 pfNoMuonPFlow
+TimeReport   0.000028   0.000033   0.000028   0.000033 pfAllElectronsPFlow
+TimeReport   0.000049   0.000059   0.000049   0.000059 pfElectronsFromVertexPFlow
+TimeReport   0.000014   0.000024   0.000014   0.000024 pfSelectedElectronsPFlow
+TimeReport   0.000034   0.000038   0.000034   0.000038 elPFIsoDepositChargedPFlow
+TimeReport   0.000021   0.000027   0.000021   0.000027 elPFIsoDepositChargedAllPFlow
+TimeReport   0.000024   0.000026   0.000024   0.000026 elPFIsoDepositGammaPFlow
+TimeReport   0.000020   0.000033   0.000020   0.000033 elPFIsoDepositNeutralPFlow
+TimeReport   0.000025   0.000029   0.000025   0.000029 elPFIsoDepositPUPFlow
+TimeReport   0.000017   0.000026   0.000017   0.000026 elPFIsoValueCharged03PFIdPFlow
+TimeReport   0.000012   0.000018   0.000012   0.000018 elPFIsoValueChargedAll03PFIdPFlow
+TimeReport   0.000013   0.000014   0.000013   0.000014 elPFIsoValueGamma03PFIdPFlow
+TimeReport   0.000013   0.000018   0.000013   0.000018 elPFIsoValueNeutral03PFIdPFlow
+TimeReport   0.000013   0.000018   0.000013   0.000018 elPFIsoValuePU03PFIdPFlow
+TimeReport   0.000011   0.000012   0.000011   0.000012 elPFIsoValueCharged04PFIdPFlow
+TimeReport   0.000012   0.000014   0.000012   0.000014 elPFIsoValueChargedAll04PFIdPFlow
+TimeReport   0.000011   0.000013   0.000011   0.000013 elPFIsoValueGamma04PFIdPFlow
+TimeReport   0.000013   0.000014   0.000013   0.000014 elPFIsoValueNeutral04PFIdPFlow
+TimeReport   0.000012   0.000019   0.000012   0.000019 elPFIsoValuePU04PFIdPFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013 elPFIsoValueCharged03NoPFIdPFlow
+TimeReport   0.000011   0.000017   0.000011   0.000017 elPFIsoValueChargedAll03NoPFIdPFlow
+TimeReport   0.000012   0.000014   0.000012   0.000014 elPFIsoValueGamma03NoPFIdPFlow
+TimeReport   0.000011   0.000013   0.000011   0.000013 elPFIsoValueNeutral03NoPFIdPFlow
+TimeReport   0.000012   0.000024   0.000012   0.000024 elPFIsoValuePU03NoPFIdPFlow
+TimeReport   0.000012   0.000016   0.000012   0.000016 elPFIsoValueCharged04NoPFIdPFlow
+TimeReport   0.000011   0.000024   0.000011   0.000024 elPFIsoValueChargedAll04NoPFIdPFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013 elPFIsoValueGamma04NoPFIdPFlow
+TimeReport   0.000011   0.000012   0.000011   0.000012 elPFIsoValueNeutral04NoPFIdPFlow
+TimeReport   0.000011   0.000016   0.000011   0.000016 elPFIsoValuePU04NoPFIdPFlow
+TimeReport   0.000014   0.000018   0.000014   0.000018 pfIsolatedElectronsPFlow
+TimeReport   0.000012   0.000035   0.000012   0.000035 pfElectronsPFlow
+TimeReport   0.001006   0.001313   0.001006   0.001313 pfNoElectronPFlow
+TimeReport   0.003193   0.004082   0.003193   0.004082 pfJetsPFlow
+TimeReport   0.000310   0.000367   0.000310   0.000367 pfNoJetPFlow
+TimeReport   0.000461   0.000619   0.000461   0.000619 pfJetTracksAssociatorAtVertexPFlow
+TimeReport   0.016510   0.021079   0.016510   0.021079 pfTauPFJets08RegionPFlow
+TimeReport   0.000123   0.000153   0.000123   0.000153 pfTauPileUpVerticesPFlow
+TimeReport   0.018363   0.023526   0.018363   0.023526 pfTauTagInfoProducerPFlow
+TimeReport   0.002818   0.003567   0.002818   0.003567 pfJetsPiZerosPFlow
+TimeReport   0.001696   0.002160   0.001696   0.002160 pfJetsLegacyTaNCPiZerosPFlow
+TimeReport   0.000979   0.001192   0.000979   0.001192 pfJetsLegacyHPSPiZerosPFlow
+TimeReport   0.019485   0.026847   0.019485   0.026847 pfTausBasePFlow
+TimeReport   0.000130   0.000169   0.000130   0.000169 hpsSelectionDiscriminatorPFlow
+TimeReport   0.005592   0.007926   0.005592   0.007926 hpsPFTauProducerSansRefsPFlow
+TimeReport   0.000202   0.000256   0.000202   0.000256 hpsPFTauProducerPFlow
+TimeReport   0.000036   0.000082   0.000036   0.000082 pfTausBaseDiscriminationByDecayModeFindingPFlow
+TimeReport   0.003030   0.004007   0.003030   0.004007 pfTausBaseDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.000030   0.000042   0.000030   0.000042 pfTausPFlow
+TimeReport   0.000082   0.000134   0.000082   0.000134 pfNoTauPFlow
+TimeReport   0.009758   0.012768   0.009758   0.012768 pfMETPFlow
+TimeReport   0.000910   0.002793   0.000910   0.002793 patElectronsPFlow
+TimeReport   0.000145   0.000309   0.000145   0.000309 patMuonsPFlow
+TimeReport   0.000001   0.000001   0.000001   0.000001 pfPileUpIsoPFlow
+TimeReport   0.000000   0.000000   0.000000   0.000000 pfNoPileUpIsoPFlow
+TimeReport   0.000000   0.000001   0.000000   0.000001 pfAllNeutralHadronsPFlow
+TimeReport   0.000000   0.000000   0.000000   0.000000 pfAllChargedHadronsPFlow
+TimeReport   0.000000   0.000000   0.000000   0.000000 pfAllPhotonsPFlow
+TimeReport   0.000000   0.000000   0.000000   0.000000 pfAllChargedParticlesPFlow
+TimeReport   0.000000   0.000000   0.000000   0.000000 pfPileUpAllChargedParticlesPFlow
+TimeReport   0.000000   0.000000   0.000000   0.000000 pfAllNeutralHadronsAndPhotonsPFlow
+TimeReport   0.033683   0.044034   0.033683   0.044034 tauIsoDepositPFCandidatesPFlow
+TimeReport   0.002961   0.003612   0.002961   0.003612 tauIsoDepositPFChargedHadronsPFlow
+TimeReport   0.002297   0.002880   0.002297   0.002880 tauIsoDepositPFNeutralHadronsPFlow
+TimeReport   0.007582   0.009787   0.007582   0.009787 tauIsoDepositPFGammasPFlow
+TimeReport   0.000067   0.000082   0.000067   0.000082 hpsPFTauDiscriminationByDecayModeFindingPFlow
+TimeReport   0.000132   0.000160   0.000132   0.000160 hpsPFTauDiscriminationByVLooseChargedIsolationPFlow
+TimeReport   0.000088   0.000111   0.000088   0.000111 hpsPFTauDiscriminationByLooseChargedIsolationPFlow
+TimeReport   0.000040   0.000048   0.000040   0.000048 hpsPFTauDiscriminationByMediumChargedIsolationPFlow
+TimeReport   0.000040   0.000045   0.000040   0.000045 hpsPFTauDiscriminationByTightChargedIsolationPFlow
+TimeReport   0.000045   0.000055   0.000045   0.000055 hpsPFTauDiscriminationByVLooseIsolationPFlow
+TimeReport   0.000037   0.000048   0.000037   0.000048 hpsPFTauDiscriminationByLooseIsolationPFlow
+TimeReport   0.000037   0.000039   0.000037   0.000039 hpsPFTauDiscriminationByMediumIsolationPFlow
+TimeReport   0.000031   0.000034   0.000031   0.000034 hpsPFTauDiscriminationByTightIsolationPFlow
+TimeReport   0.001637   0.002282   0.001637   0.002282 hpsPFTauDiscriminationByVLooseIsolationDBSumPtCorrPFlow
+TimeReport   0.001208   0.001722   0.001208   0.001722 hpsPFTauDiscriminationByLooseIsolationDBSumPtCorrPFlow
+TimeReport   0.001057   0.001423   0.001057   0.001423 hpsPFTauDiscriminationByMediumIsolationDBSumPtCorrPFlow
+TimeReport   0.000815   0.001083   0.000815   0.001083 hpsPFTauDiscriminationByTightIsolationDBSumPtCorrPFlow
+TimeReport   0.002850   0.004107   0.002850   0.004107 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002830   0.004096   0.002830   0.004096 hpsPFTauDiscriminationByRawChargedIsolationDBSumPtCorrPFlow
+TimeReport   0.002800   0.003867   0.002800   0.003867 hpsPFTauDiscriminationByRawGammaIsolationDBSumPtCorrPFlow
+TimeReport   0.002839   0.003911   0.002839   0.003911 hpsPFTauDiscriminationByVLooseCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002823   0.003705   0.002823   0.003705 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002821   0.003897   0.002821   0.003897 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002821   0.003874   0.002821   0.003874 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.000026   0.000044   0.000026   0.000044 hpsPFTauDiscriminationByLooseElectronRejectionPFlow
+TimeReport   0.000021   0.000025   0.000021   0.000025 hpsPFTauDiscriminationByMediumElectronRejectionPFlow
+TimeReport   0.000030   0.000038   0.000030   0.000038 hpsPFTauDiscriminationByTightElectronRejectionPFlow
+TimeReport   0.000533   0.000868   0.000533   0.000868 hpsPFTauDiscriminationByMVAElectronRejectionPFlow
+TimeReport   0.000020   0.000026   0.000020   0.000026 hpsPFTauDiscriminationByLooseMuonRejectionPFlow
+TimeReport   0.000016   0.000020   0.000016   0.000020 hpsPFTauDiscriminationByMediumMuonRejectionPFlow
+TimeReport   0.000020   0.000052   0.000020   0.000052 hpsPFTauDiscriminationByTightMuonRejectionPFlow
+TimeReport   0.013112   0.016988   0.013112   0.016988 patTausPFlow
+TimeReport   0.000520   0.000766   0.000520   0.000766 patJetCorrFactorsPFlow
+TimeReport   0.000459   0.000605   0.000459   0.000605 jetTracksAssociatorAtVertexPFlow
+TimeReport   0.004950   0.006609   0.004950   0.006609 impactParameterTagInfosAODPFlow
+TimeReport   0.001698   0.002593   0.001698   0.002593 secondaryVertexTagInfosAODPFlow
+TimeReport   0.000247   0.002567   0.000247   0.002567 softMuonTagInfosAODPFlow
+TimeReport   0.001516   0.002135   0.001516   0.002135 secondaryVertexNegativeTagInfosAODPFlow
+TimeReport   0.000001   0.000000   0.000001   0.000000 secondaryVertexNegativeTagInfosAODPFlow
+TimeReport   0.007781   0.011344   0.007781   0.011344 inclusiveVertexFinder
+TimeReport   0.000051   0.000075   0.000051   0.000075 vertexMerger
+TimeReport   0.007554   0.010236   0.007554   0.010236 trackVertexArbitrator
+TimeReport   0.000018   0.000021   0.000018   0.000021 inclusiveMergedVertices
+TimeReport   0.000322   0.000488   0.000322   0.000488 inclusiveSecondaryVertexFinderTagInfosAODPFlow
+TimeReport   0.000088   0.000106   0.000088   0.000106 softElectronCands
+TimeReport   0.000193   0.000247   0.000193   0.000247 softElectronTagInfosAODPFlow
+TimeReport   0.000172   0.000219   0.000172   0.000219 jetBProbabilityBJetTagsAODPFlow
+TimeReport   0.000147   0.000217   0.000147   0.000217 jetProbabilityBJetTagsAODPFlow
+TimeReport   0.000133   0.000163   0.000133   0.000163 trackCountingHighPurBJetTagsAODPFlow
+TimeReport   0.000130   0.000189   0.000130   0.000189 trackCountingHighEffBJetTagsAODPFlow
+TimeReport   0.000129   0.000181   0.000129   0.000181 simpleSecondaryVertexHighEffBJetTagsAODPFlow
+TimeReport   0.000125   0.000153   0.000125   0.000153 simpleSecondaryVertexHighPurBJetTagsAODPFlow
+TimeReport   0.000577   0.000754   0.000577   0.000754 combinedSecondaryVertexBJetTagsAODPFlow
+TimeReport   0.000673   0.000848   0.000673   0.000848 combinedSecondaryVertexMVABJetTagsAODPFlow
+TimeReport   0.000144   0.000154   0.000144   0.000154 softMuonBJetTagsAODPFlow
+TimeReport   0.000122   0.000249   0.000122   0.000249 softMuonByPtBJetTagsAODPFlow
+TimeReport   0.000120   0.000229   0.000120   0.000229 softMuonByIP3dBJetTagsAODPFlow
+TimeReport   0.000129   0.000144   0.000129   0.000144 simpleSecondaryVertexNegativeHighEffBJetTagsAODPFlow
+TimeReport   0.000120   0.000157   0.000120   0.000157 simpleSecondaryVertexNegativeHighPurBJetTagsAODPFlow
+TimeReport   0.000131   0.000168   0.000131   0.000168 negativeTrackCountingHighEffJetTagsAODPFlow
+TimeReport   0.000128   0.000168   0.000128   0.000168 negativeTrackCountingHighPurJetTagsAODPFlow
+TimeReport   0.000520   0.000752   0.000520   0.000752 combinedInclusiveSecondaryVertexBJetTagsAODPFlow
+TimeReport   0.000837   0.001091   0.000837   0.001091 combinedMVABJetTagsAODPFlow
+TimeReport   0.000093   0.000113   0.000093   0.000113 patJetChargePFlow
+TimeReport   0.002953   0.003911   0.002953   0.003911 patJetsPFlow
+TimeReport   0.000065   0.000083   0.000065   0.000083 patMETsPFlow
+TimeReport   0.001900   0.002645   0.001900   0.002645 patPFParticlesPFlow
+TimeReport   0.000137   0.000169   0.000137   0.000169 patCandidateSummaryPFlow
+TimeReport   0.000022   0.000053   0.000022   0.000053 selectedPatElectronsPFlow
+TimeReport   0.000012   0.000023   0.000012   0.000023 selectedPatMuonsPFlow
+TimeReport   0.002304   0.003116   0.002304   0.003116 selectedPatTausPFlow
+TimeReport   0.001346   0.001864   0.001346   0.001864 selectedPatJetsPFlow
+TimeReport   0.000601   0.000847   0.000601   0.000847 selectedPatPFParticlesPFlow
+TimeReport   0.000124   0.000155   0.000124   0.000155 selectedPatCandidateSummaryPFlow
+TimeReport   0.000013   0.000013   0.000013   0.000013 countPatElectronsPFlow
+TimeReport   0.000011   0.000011   0.000011   0.000011 countPatMuonsPFlow
+TimeReport   0.000019   0.000020   0.000019   0.000020 countPatTausPFlow
+TimeReport   0.000021   0.000032   0.000021   0.000032 countPatLeptonsPFlow
+TimeReport   0.000017   0.000030   0.000017   0.000030 countPatJetsPFlow
+TimeReport   0.000039   0.000042   0.000039   0.000042 countPatPFParticlesPFlow
+TimeReport   0.000840   0.001125   0.000840   0.001125 pfCandsNotInJet
+TimeReport   0.001869   0.002670   0.001869   0.002670 pfJetMETcorr
+TimeReport   0.000089   0.000133   0.000089   0.000133 pfCandMETcorr
+TimeReport   0.000047   0.000052   0.000047   0.000052 pfchsMETcorr
+TimeReport   0.000085   0.000095   0.000085   0.000095 pfType1CorrectedMet
+TimeReport   0.000018   0.000020   0.000018   0.000020 pfType1p2CorrectedMet
+TimeReport   0.002401   0.003719   0.002401   0.003719 ana
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event      per module-visit 
+TimeReport        CPU       Real        CPU       Real Name
+TimeReport             per event      per module-visit 
+
+TimeReport ---------- Module Summary ---[sec]----
+TimeReport             per event        per module-run      per module-visit 
+TimeReport        CPU       Real        CPU       Real        CPU       Real Name
+TimeReport   0.000426   0.000918   0.000426   0.000918   0.000426   0.000918 uncleanSCRecovered
+TimeReport   0.000470   0.000716   0.000470   0.000716   0.000470   0.000716 myphotonCores
+TimeReport   0.019411   0.028083   0.019411   0.028083   0.019411   0.028083 myphotons
+TimeReport   0.000051   0.000061   0.000051   0.000061   0.000051   0.000061 PhotonIDProd
+TimeReport   0.007891   0.011034   0.007891   0.011034   0.007891   0.011034 pfPileUpPFlow
+TimeReport   0.001084   0.001536   0.001084   0.001536   0.001084   0.001536 pfNoPileUpPFlow
+TimeReport   0.002655   0.003702   0.002655   0.003702   0.001327   0.001851 pfPileUpIsoPFlow
+TimeReport   0.001081   0.001536   0.001081   0.001536   0.000540   0.000768 pfNoPileUpIsoPFlow
+TimeReport   0.000145   0.000184   0.000145   0.000184   0.000073   0.000092 pfAllNeutralHadronsPFlow
+TimeReport   0.000251   0.000302   0.000251   0.000302   0.000126   0.000151 pfAllChargedHadronsPFlow
+TimeReport   0.000453   0.000687   0.000453   0.000687   0.000226   0.000344 pfAllPhotonsPFlow
+TimeReport   0.000265   0.000345   0.000265   0.000345   0.000133   0.000173 pfAllChargedParticlesPFlow
+TimeReport   0.000754   0.001057   0.000754   0.001057   0.000377   0.000529 pfPileUpAllChargedParticlesPFlow
+TimeReport   0.000572   0.000803   0.000572   0.000803   0.000286   0.000401 pfAllNeutralHadronsAndPhotonsPFlow
+TimeReport   0.000049   0.000058   0.000049   0.000058   0.000049   0.000058 pfSelectedPhotonsPFlow
+TimeReport   0.000123   0.000163   0.000123   0.000163   0.000123   0.000163 phPFIsoDepositChargedPFlow
+TimeReport   0.000048   0.000077   0.000048   0.000077   0.000048   0.000077 phPFIsoDepositChargedAllPFlow
+TimeReport   0.000062   0.000104   0.000062   0.000104   0.000062   0.000104 phPFIsoDepositGammaPFlow
+TimeReport   0.000036   0.000045   0.000036   0.000045   0.000036   0.000045 phPFIsoDepositNeutralPFlow
+TimeReport   0.000075   0.000104   0.000075   0.000104   0.000075   0.000104 phPFIsoDepositPUPFlow
+TimeReport   0.000033   0.000048   0.000033   0.000048   0.000033   0.000048 phPFIsoValueCharged03PFIdPFlow
+TimeReport   0.000019   0.000026   0.000019   0.000026   0.000019   0.000026 phPFIsoValueChargedAll03PFIdPFlow
+TimeReport   0.000019   0.000021   0.000019   0.000021   0.000019   0.000021 phPFIsoValueGamma03PFIdPFlow
+TimeReport   0.000020   0.000022   0.000020   0.000022   0.000020   0.000022 phPFIsoValueNeutral03PFIdPFlow
+TimeReport   0.000020   0.000023   0.000020   0.000023   0.000020   0.000023 phPFIsoValuePU03PFIdPFlow
+TimeReport   0.000019   0.000023   0.000019   0.000023   0.000019   0.000023 phPFIsoValueCharged04PFIdPFlow
+TimeReport   0.000019   0.000019   0.000019   0.000019   0.000019   0.000019 phPFIsoValueChargedAll04PFIdPFlow
+TimeReport   0.000019   0.000027   0.000019   0.000027   0.000019   0.000027 phPFIsoValueGamma04PFIdPFlow
+TimeReport   0.000017   0.000028   0.000017   0.000028   0.000017   0.000028 phPFIsoValueNeutral04PFIdPFlow
+TimeReport   0.000019   0.000053   0.000019   0.000053   0.000019   0.000053 phPFIsoValuePU04PFIdPFlow
+TimeReport   0.000023   0.000024   0.000023   0.000024   0.000023   0.000024 pfIsolatedPhotonsPFlow
+TimeReport   0.000052   0.000079   0.000052   0.000079   0.000052   0.000079 pfAllMuonsPFlow
+TimeReport   0.000016   0.000025   0.000016   0.000025   0.000016   0.000025 pfMuonsFromVertexPFlow
+TimeReport   0.000011   0.000011   0.000011   0.000011   0.000011   0.000011 pfSelectedMuonsPFlow
+TimeReport   0.000025   0.000037   0.000025   0.000037   0.000025   0.000037 muPFIsoDepositChargedPFlow
+TimeReport   0.000020   0.000025   0.000020   0.000025   0.000020   0.000025 muPFIsoDepositChargedAllPFlow
+TimeReport   0.000018   0.000021   0.000018   0.000021   0.000018   0.000021 muPFIsoDepositGammaPFlow
+TimeReport   0.000017   0.000020   0.000017   0.000020   0.000017   0.000020 muPFIsoDepositNeutralPFlow
+TimeReport   0.000019   0.000025   0.000019   0.000025   0.000019   0.000025 muPFIsoDepositPUPFlow
+TimeReport   0.000014   0.000016   0.000014   0.000016   0.000014   0.000016 muPFIsoValueCharged03PFlow
+TimeReport   0.000012   0.000014   0.000012   0.000014   0.000012   0.000014 muPFIsoValueChargedAll03PFlow
+TimeReport   0.000013   0.000013   0.000013   0.000013   0.000013   0.000013 muPFIsoValueGamma03PFlow
+TimeReport   0.000014   0.000014   0.000014   0.000014   0.000014   0.000014 muPFIsoValueNeutral03PFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013   0.000012   0.000013 muPFIsoValueGammaHighThreshold03PFlow
+TimeReport   0.000011   0.000014   0.000011   0.000014   0.000011   0.000014 muPFIsoValueNeutralHighThreshold03PFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013   0.000012   0.000013 muPFIsoValuePU03PFlow
+TimeReport   0.000011   0.000019   0.000011   0.000019   0.000011   0.000019 muPFIsoValueCharged04PFlow
+TimeReport   0.000010   0.000041   0.000010   0.000041   0.000010   0.000041 muPFIsoValueChargedAll04PFlow
+TimeReport   0.000012   0.000012   0.000012   0.000012   0.000012   0.000012 muPFIsoValueGamma04PFlow
+TimeReport   0.000012   0.000016   0.000012   0.000016   0.000012   0.000016 muPFIsoValueNeutral04PFlow
+TimeReport   0.000011   0.000013   0.000011   0.000013   0.000011   0.000013 muPFIsoValueGammaHighThreshold04PFlow
+TimeReport   0.000010   0.000012   0.000010   0.000012   0.000010   0.000012 muPFIsoValueNeutralHighThreshold04PFlow
+TimeReport   0.000010   0.000011   0.000010   0.000011   0.000010   0.000011 muPFIsoValuePU04PFlow
+TimeReport   0.000014   0.000015   0.000014   0.000015   0.000014   0.000015 pfIsolatedMuonsPFlow
+TimeReport   0.000011   0.000019   0.000011   0.000019   0.000011   0.000019 pfMuonsPFlow
+TimeReport   0.001097   0.001419   0.001097   0.001419   0.001097   0.001419 pfNoMuonPFlow
+TimeReport   0.000028   0.000033   0.000028   0.000033   0.000028   0.000033 pfAllElectronsPFlow
+TimeReport   0.000049   0.000059   0.000049   0.000059   0.000049   0.000059 pfElectronsFromVertexPFlow
+TimeReport   0.000014   0.000024   0.000014   0.000024   0.000014   0.000024 pfSelectedElectronsPFlow
+TimeReport   0.000034   0.000038   0.000034   0.000038   0.000034   0.000038 elPFIsoDepositChargedPFlow
+TimeReport   0.000021   0.000027   0.000021   0.000027   0.000021   0.000027 elPFIsoDepositChargedAllPFlow
+TimeReport   0.000024   0.000026   0.000024   0.000026   0.000024   0.000026 elPFIsoDepositGammaPFlow
+TimeReport   0.000020   0.000033   0.000020   0.000033   0.000020   0.000033 elPFIsoDepositNeutralPFlow
+TimeReport   0.000025   0.000029   0.000025   0.000029   0.000025   0.000029 elPFIsoDepositPUPFlow
+TimeReport   0.000017   0.000026   0.000017   0.000026   0.000017   0.000026 elPFIsoValueCharged03PFIdPFlow
+TimeReport   0.000012   0.000018   0.000012   0.000018   0.000012   0.000018 elPFIsoValueChargedAll03PFIdPFlow
+TimeReport   0.000013   0.000014   0.000013   0.000014   0.000013   0.000014 elPFIsoValueGamma03PFIdPFlow
+TimeReport   0.000013   0.000018   0.000013   0.000018   0.000013   0.000018 elPFIsoValueNeutral03PFIdPFlow
+TimeReport   0.000013   0.000018   0.000013   0.000018   0.000013   0.000018 elPFIsoValuePU03PFIdPFlow
+TimeReport   0.000011   0.000012   0.000011   0.000012   0.000011   0.000012 elPFIsoValueCharged04PFIdPFlow
+TimeReport   0.000012   0.000014   0.000012   0.000014   0.000012   0.000014 elPFIsoValueChargedAll04PFIdPFlow
+TimeReport   0.000011   0.000013   0.000011   0.000013   0.000011   0.000013 elPFIsoValueGamma04PFIdPFlow
+TimeReport   0.000013   0.000014   0.000013   0.000014   0.000013   0.000014 elPFIsoValueNeutral04PFIdPFlow
+TimeReport   0.000012   0.000019   0.000012   0.000019   0.000012   0.000019 elPFIsoValuePU04PFIdPFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013   0.000012   0.000013 elPFIsoValueCharged03NoPFIdPFlow
+TimeReport   0.000011   0.000017   0.000011   0.000017   0.000011   0.000017 elPFIsoValueChargedAll03NoPFIdPFlow
+TimeReport   0.000012   0.000014   0.000012   0.000014   0.000012   0.000014 elPFIsoValueGamma03NoPFIdPFlow
+TimeReport   0.000011   0.000013   0.000011   0.000013   0.000011   0.000013 elPFIsoValueNeutral03NoPFIdPFlow
+TimeReport   0.000012   0.000024   0.000012   0.000024   0.000012   0.000024 elPFIsoValuePU03NoPFIdPFlow
+TimeReport   0.000012   0.000016   0.000012   0.000016   0.000012   0.000016 elPFIsoValueCharged04NoPFIdPFlow
+TimeReport   0.000011   0.000024   0.000011   0.000024   0.000011   0.000024 elPFIsoValueChargedAll04NoPFIdPFlow
+TimeReport   0.000012   0.000013   0.000012   0.000013   0.000012   0.000013 elPFIsoValueGamma04NoPFIdPFlow
+TimeReport   0.000011   0.000012   0.000011   0.000012   0.000011   0.000012 elPFIsoValueNeutral04NoPFIdPFlow
+TimeReport   0.000011   0.000016   0.000011   0.000016   0.000011   0.000016 elPFIsoValuePU04NoPFIdPFlow
+TimeReport   0.000014   0.000018   0.000014   0.000018   0.000014   0.000018 pfIsolatedElectronsPFlow
+TimeReport   0.000012   0.000035   0.000012   0.000035   0.000012   0.000035 pfElectronsPFlow
+TimeReport   0.001006   0.001313   0.001006   0.001313   0.001006   0.001313 pfNoElectronPFlow
+TimeReport   0.003193   0.004082   0.003193   0.004082   0.003193   0.004082 pfJetsPFlow
+TimeReport   0.000310   0.000367   0.000310   0.000367   0.000310   0.000367 pfNoJetPFlow
+TimeReport   0.000461   0.000619   0.000461   0.000619   0.000461   0.000619 pfJetTracksAssociatorAtVertexPFlow
+TimeReport   0.016510   0.021079   0.016510   0.021079   0.016510   0.021079 pfTauPFJets08RegionPFlow
+TimeReport   0.000123   0.000153   0.000123   0.000153   0.000123   0.000153 pfTauPileUpVerticesPFlow
+TimeReport   0.018363   0.023526   0.018363   0.023526   0.018363   0.023526 pfTauTagInfoProducerPFlow
+TimeReport   0.002818   0.003567   0.002818   0.003567   0.002818   0.003567 pfJetsPiZerosPFlow
+TimeReport   0.001696   0.002160   0.001696   0.002160   0.001696   0.002160 pfJetsLegacyTaNCPiZerosPFlow
+TimeReport   0.000979   0.001192   0.000979   0.001192   0.000979   0.001192 pfJetsLegacyHPSPiZerosPFlow
+TimeReport   0.019485   0.026847   0.019485   0.026847   0.019485   0.026847 pfTausBasePFlow
+TimeReport   0.000130   0.000169   0.000130   0.000169   0.000130   0.000169 hpsSelectionDiscriminatorPFlow
+TimeReport   0.005592   0.007926   0.005592   0.007926   0.005592   0.007926 hpsPFTauProducerSansRefsPFlow
+TimeReport   0.000202   0.000256   0.000202   0.000256   0.000202   0.000256 hpsPFTauProducerPFlow
+TimeReport   0.000036   0.000082   0.000036   0.000082   0.000036   0.000082 pfTausBaseDiscriminationByDecayModeFindingPFlow
+TimeReport   0.003030   0.004007   0.003030   0.004007   0.003030   0.004007 pfTausBaseDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.000030   0.000042   0.000030   0.000042   0.000030   0.000042 pfTausPFlow
+TimeReport   0.000082   0.000134   0.000082   0.000134   0.000082   0.000134 pfNoTauPFlow
+TimeReport   0.009758   0.012768   0.009758   0.012768   0.009758   0.012768 pfMETPFlow
+TimeReport   0.000910   0.002793   0.000910   0.002793   0.000910   0.002793 patElectronsPFlow
+TimeReport   0.000145   0.000309   0.000145   0.000309   0.000145   0.000309 patMuonsPFlow
+TimeReport   0.033683   0.044034   0.033683   0.044034   0.033683   0.044034 tauIsoDepositPFCandidatesPFlow
+TimeReport   0.002961   0.003612   0.002961   0.003612   0.002961   0.003612 tauIsoDepositPFChargedHadronsPFlow
+TimeReport   0.002297   0.002880   0.002297   0.002880   0.002297   0.002880 tauIsoDepositPFNeutralHadronsPFlow
+TimeReport   0.007582   0.009787   0.007582   0.009787   0.007582   0.009787 tauIsoDepositPFGammasPFlow
+TimeReport   0.000067   0.000082   0.000067   0.000082   0.000067   0.000082 hpsPFTauDiscriminationByDecayModeFindingPFlow
+TimeReport   0.000132   0.000160   0.000132   0.000160   0.000132   0.000160 hpsPFTauDiscriminationByVLooseChargedIsolationPFlow
+TimeReport   0.000088   0.000111   0.000088   0.000111   0.000088   0.000111 hpsPFTauDiscriminationByLooseChargedIsolationPFlow
+TimeReport   0.000040   0.000048   0.000040   0.000048   0.000040   0.000048 hpsPFTauDiscriminationByMediumChargedIsolationPFlow
+TimeReport   0.000040   0.000045   0.000040   0.000045   0.000040   0.000045 hpsPFTauDiscriminationByTightChargedIsolationPFlow
+TimeReport   0.000045   0.000055   0.000045   0.000055   0.000045   0.000055 hpsPFTauDiscriminationByVLooseIsolationPFlow
+TimeReport   0.000037   0.000048   0.000037   0.000048   0.000037   0.000048 hpsPFTauDiscriminationByLooseIsolationPFlow
+TimeReport   0.000037   0.000039   0.000037   0.000039   0.000037   0.000039 hpsPFTauDiscriminationByMediumIsolationPFlow
+TimeReport   0.000031   0.000034   0.000031   0.000034   0.000031   0.000034 hpsPFTauDiscriminationByTightIsolationPFlow
+TimeReport   0.001637   0.002282   0.001637   0.002282   0.001637   0.002282 hpsPFTauDiscriminationByVLooseIsolationDBSumPtCorrPFlow
+TimeReport   0.001208   0.001722   0.001208   0.001722   0.001208   0.001722 hpsPFTauDiscriminationByLooseIsolationDBSumPtCorrPFlow
+TimeReport   0.001057   0.001423   0.001057   0.001423   0.001057   0.001423 hpsPFTauDiscriminationByMediumIsolationDBSumPtCorrPFlow
+TimeReport   0.000815   0.001083   0.000815   0.001083   0.000815   0.001083 hpsPFTauDiscriminationByTightIsolationDBSumPtCorrPFlow
+TimeReport   0.002850   0.004107   0.002850   0.004107   0.002850   0.004107 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002830   0.004096   0.002830   0.004096   0.002830   0.004096 hpsPFTauDiscriminationByRawChargedIsolationDBSumPtCorrPFlow
+TimeReport   0.002800   0.003867   0.002800   0.003867   0.002800   0.003867 hpsPFTauDiscriminationByRawGammaIsolationDBSumPtCorrPFlow
+TimeReport   0.002839   0.003911   0.002839   0.003911   0.002839   0.003911 hpsPFTauDiscriminationByVLooseCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002823   0.003705   0.002823   0.003705   0.002823   0.003705 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002821   0.003897   0.002821   0.003897   0.002821   0.003897 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.002821   0.003874   0.002821   0.003874   0.002821   0.003874 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorrPFlow
+TimeReport   0.000026   0.000044   0.000026   0.000044   0.000026   0.000044 hpsPFTauDiscriminationByLooseElectronRejectionPFlow
+TimeReport   0.000021   0.000025   0.000021   0.000025   0.000021   0.000025 hpsPFTauDiscriminationByMediumElectronRejectionPFlow
+TimeReport   0.000030   0.000038   0.000030   0.000038   0.000030   0.000038 hpsPFTauDiscriminationByTightElectronRejectionPFlow
+TimeReport   0.000533   0.000868   0.000533   0.000868   0.000533   0.000868 hpsPFTauDiscriminationByMVAElectronRejectionPFlow
+TimeReport   0.000020   0.000026   0.000020   0.000026   0.000020   0.000026 hpsPFTauDiscriminationByLooseMuonRejectionPFlow
+TimeReport   0.000016   0.000020   0.000016   0.000020   0.000016   0.000020 hpsPFTauDiscriminationByMediumMuonRejectionPFlow
+TimeReport   0.000020   0.000052   0.000020   0.000052   0.000020   0.000052 hpsPFTauDiscriminationByTightMuonRejectionPFlow
+TimeReport   0.013112   0.016988   0.013112   0.016988   0.013112   0.016988 patTausPFlow
+TimeReport   0.000520   0.000766   0.000520   0.000766   0.000520   0.000766 patJetCorrFactorsPFlow
+TimeReport   0.000459   0.000605   0.000459   0.000605   0.000459   0.000605 jetTracksAssociatorAtVertexPFlow
+TimeReport   0.004950   0.006609   0.004950   0.006609   0.004950   0.006609 impactParameterTagInfosAODPFlow
+TimeReport   0.001698   0.002593   0.001698   0.002593   0.001698   0.002593 secondaryVertexTagInfosAODPFlow
+TimeReport   0.000247   0.002567   0.000247   0.002567   0.000247   0.002567 softMuonTagInfosAODPFlow
+TimeReport   0.001517   0.002135   0.001517   0.002135   0.000759   0.001068 secondaryVertexNegativeTagInfosAODPFlow
+TimeReport   0.007781   0.011344   0.007781   0.011344   0.007781   0.011344 inclusiveVertexFinder
+TimeReport   0.000051   0.000075   0.000051   0.000075   0.000051   0.000075 vertexMerger
+TimeReport   0.007554   0.010236   0.007554   0.010236   0.007554   0.010236 trackVertexArbitrator
+TimeReport   0.000018   0.000021   0.000018   0.000021   0.000018   0.000021 inclusiveMergedVertices
+TimeReport   0.000322   0.000488   0.000322   0.000488   0.000322   0.000488 inclusiveSecondaryVertexFinderTagInfosAODPFlow
+TimeReport   0.000088   0.000106   0.000088   0.000106   0.000088   0.000106 softElectronCands
+TimeReport   0.000193   0.000247   0.000193   0.000247   0.000193   0.000247 softElectronTagInfosAODPFlow
+TimeReport   0.000172   0.000219   0.000172   0.000219   0.000172   0.000219 jetBProbabilityBJetTagsAODPFlow
+TimeReport   0.000147   0.000217   0.000147   0.000217   0.000147   0.000217 jetProbabilityBJetTagsAODPFlow
+TimeReport   0.000133   0.000163   0.000133   0.000163   0.000133   0.000163 trackCountingHighPurBJetTagsAODPFlow
+TimeReport   0.000130   0.000189   0.000130   0.000189   0.000130   0.000189 trackCountingHighEffBJetTagsAODPFlow
+TimeReport   0.000129   0.000181   0.000129   0.000181   0.000129   0.000181 simpleSecondaryVertexHighEffBJetTagsAODPFlow
+TimeReport   0.000125   0.000153   0.000125   0.000153   0.000125   0.000153 simpleSecondaryVertexHighPurBJetTagsAODPFlow
+TimeReport   0.000577   0.000754   0.000577   0.000754   0.000577   0.000754 combinedSecondaryVertexBJetTagsAODPFlow
+TimeReport   0.000673   0.000848   0.000673   0.000848   0.000673   0.000848 combinedSecondaryVertexMVABJetTagsAODPFlow
+TimeReport   0.000144   0.000154   0.000144   0.000154   0.000144   0.000154 softMuonBJetTagsAODPFlow
+TimeReport   0.000122   0.000249   0.000122   0.000249   0.000122   0.000249 softMuonByPtBJetTagsAODPFlow
+TimeReport   0.000120   0.000229   0.000120   0.000229   0.000120   0.000229 softMuonByIP3dBJetTagsAODPFlow
+TimeReport   0.000129   0.000144   0.000129   0.000144   0.000129   0.000144 simpleSecondaryVertexNegativeHighEffBJetTagsAODPFlow
+TimeReport   0.000120   0.000157   0.000120   0.000157   0.000120   0.000157 simpleSecondaryVertexNegativeHighPurBJetTagsAODPFlow
+TimeReport   0.000131   0.000168   0.000131   0.000168   0.000131   0.000168 negativeTrackCountingHighEffJetTagsAODPFlow
+TimeReport   0.000128   0.000168   0.000128   0.000168   0.000128   0.000168 negativeTrackCountingHighPurJetTagsAODPFlow
+TimeReport   0.000520   0.000752   0.000520   0.000752   0.000520   0.000752 combinedInclusiveSecondaryVertexBJetTagsAODPFlow
+TimeReport   0.000837   0.001091   0.000837   0.001091   0.000837   0.001091 combinedMVABJetTagsAODPFlow
+TimeReport   0.000093   0.000113   0.000093   0.000113   0.000093   0.000113 patJetChargePFlow
+TimeReport   0.002953   0.003911   0.002953   0.003911   0.002953   0.003911 patJetsPFlow
+TimeReport   0.000065   0.000083   0.000065   0.000083   0.000065   0.000083 patMETsPFlow
+TimeReport   0.001900   0.002645   0.001900   0.002645   0.001900   0.002645 patPFParticlesPFlow
+TimeReport   0.000137   0.000169   0.000137   0.000169   0.000137   0.000169 patCandidateSummaryPFlow
+TimeReport   0.000022   0.000053   0.000022   0.000053   0.000022   0.000053 selectedPatElectronsPFlow
+TimeReport   0.000012   0.000023   0.000012   0.000023   0.000012   0.000023 selectedPatMuonsPFlow
+TimeReport   0.002304   0.003116   0.002304   0.003116   0.002304   0.003116 selectedPatTausPFlow
+TimeReport   0.001346   0.001864   0.001346   0.001864   0.001346   0.001864 selectedPatJetsPFlow
+TimeReport   0.000601   0.000847   0.000601   0.000847   0.000601   0.000847 selectedPatPFParticlesPFlow
+TimeReport   0.000124   0.000155   0.000124   0.000155   0.000124   0.000155 selectedPatCandidateSummaryPFlow
+TimeReport   0.000013   0.000013   0.000013   0.000013   0.000013   0.000013 countPatElectronsPFlow
+TimeReport   0.000011   0.000011   0.000011   0.000011   0.000011   0.000011 countPatMuonsPFlow
+TimeReport   0.000019   0.000020   0.000019   0.000020   0.000019   0.000020 countPatTausPFlow
+TimeReport   0.000021   0.000032   0.000021   0.000032   0.000021   0.000032 countPatLeptonsPFlow
+TimeReport   0.000017   0.000030   0.000017   0.000030   0.000017   0.000030 countPatJetsPFlow
+TimeReport   0.000039   0.000042   0.000039   0.000042   0.000039   0.000042 countPatPFParticlesPFlow
+TimeReport   0.000840   0.001125   0.000840   0.001125   0.000840   0.001125 pfCandsNotInJet
+TimeReport   0.001869   0.002670   0.001869   0.002670   0.001869   0.002670 pfJetMETcorr
+TimeReport   0.000089   0.000133   0.000089   0.000133   0.000089   0.000133 pfCandMETcorr
+TimeReport   0.000047   0.000052   0.000047   0.000052   0.000047   0.000052 pfchsMETcorr
+TimeReport   0.000085   0.000095   0.000085   0.000095   0.000085   0.000095 pfType1CorrectedMet
+TimeReport   0.000018   0.000020   0.000018   0.000020   0.000018   0.000020 pfType1p2CorrectedMet
+TimeReport   0.002401   0.003719   0.002401   0.003719   0.002401   0.003719 ana
+TimeReport   0.000040   0.000044   0.000040   0.000044   0.000040   0.000044 TriggerResults
+TimeReport        CPU       Real        CPU       Real        CPU       Real Name
+TimeReport             per event        per module-run      per module-visit 
+
+T---Report end!
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 fileAction           -s file_close                             7        7
+    2 fileAction           -s file_open                             14       14
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    2 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+System                 21                  21
+All:26054 Trigger:26054 Vertex:21160 Photon:408 beamHalo:406 Jet:406 MET:406 Pre-Selection:406
