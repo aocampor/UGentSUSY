@@ -1,0 +1,461 @@
+#include "TColor.h"
+#include "TStyle.h"
+#include "TMath.h"
+#include "TFile.h"
+#include "TF2.h"
+#include "TH1F.h"
+#include "TH2F.h"
+#include "TH2D.h"
+#include "TTree.h"
+#include "TGraph.h"
+#include "TMultiGraph.h"
+#include "TCanvas.h"
+#include "TLegend.h"
+#include "TStyle.h"
+#include "TLatex.h"
+#include "TPolyLine.h"
+#include "TROOT.h"
+#include "TF1.h"
+#include "TGaxis.h"
+
+
+#include <iomanip>
+#include <fstream>
+#include <iostream>
+#include <time.h>
+#include <vector>
+#include <string>
+#include <sstream>
+#include <map>
+#include <utility>
+
+
+
+
+using namespace std;
+void rootlogon();
+
+
+TString savedir = "~/www/";
+TString indir = "/afs/cern.ch/work/s/sigamani/public/CMSSW_6_1_1/src/HiggsAnalysis/CombinedLimit/"; 
+
+
+
+
+
+
+void plot_limit(TString dir){
+
+          gStyle->SetOptStat(0);
+          gStyle->SetCanvasColor(0);
+          gStyle->SetPadColor(0);
+          gStyle->SetMarkerStyle(15);
+          gStyle->SetMarkerSize(0.25);
+          gStyle->SetTextFont(42);
+          gStyle->SetMarkerColor(37);
+
+
+  //palette settings - completely independent
+  const Int_t NRGBs = 6;
+  const Int_t NCont = 999;
+
+  Double_t stops[NRGBs] = { 0.00, 0.1, 0.34, 0.61, 0.84, 1.00 };
+  Double_t red[NRGBs]   = { 0.99, 0.0, 0.00, 0.87, 1.00, 0.51 };
+  Double_t green[NRGBs] = { 0.00, 0.0, 0.81, 1.00, 0.20, 0.00 };
+  Double_t blue[NRGBs]  = { 0.99, 0.0, 1.00, 0.12, 0.00, 0.00 };
+
+
+  TColor::CreateGradientColorTable(NRGBs, stops, red, green, blue, NCont);
+  gStyle->SetNumberContours(NCont);
+
+  gStyle->SetOptStat(0);
+
+
+   double shell;
+
+   if (dir == "T2bw025") {dataset_name = "t2bw025"; shell = 80. / 0.25;}
+   if (dir == "T2bw050") {dataset_name = "t2bw050"; shell = 80. / 0.50;}
+   if (dir == "T2bw075") {dataset_name = "t2bw075"; shell = 80. / 0.75;}
+   if (dir == "T2tt")    {dataset_name = "t2tt";    shell = 173.;}
+
+
+
+   TH2D *SMS = new TH2D("SMS","",26,157.5, 812.5, 28, 12.5,712.5);
+   TH2D *SMS_obs = new TH2D("SMS_obs","",26,157.5, 812.5, 28, 12.5,712.5);
+
+
+              for(int x=175; x<=800; x+=25){
+
+
+                      for(int y=25; y<=700; y+=25){
+
+
+  		  char filename[500];
+	          long begin,end;
+
+
+
+                  sprintf(filename,"/afs/cern.ch/work/s/sigamani/public/CMSSW_6_1_1/src/HiggsAnalysis/CombinedLimit/%s/higgsCombineS%d-N%d.Asymptotic.mH120.root", dataset_name, x, y);
+                  ifstream ifile(filename);
+	          if (!ifile.good()) continue; 
+
+		  TFile* file  = new TFile(filename, "READ");  
+		  char* name = (char*)file->GetName();
+
+
+
+TTree *limittree = (TTree*)file->Get("limit");
+
+
+double high_val = 100.;
+
+
+TH1F* obs = new TH1F("obs","",100,0,high_val);
+limittree->Draw("limit>>obs", "quantileExpected==-1");
+TH1F* expm2 = new TH1F("expm2","",100,0,high_val);
+limittree->Draw("limit>>expm2", "quantileExpected>0.02 && quantileExpected<0.03");
+TH1F* expm1 = new TH1F("expm1","",100,0,high_val);
+limittree->Draw("limit>>expm1", "quantileExpected>0.15 && quantileExpected<0.16");
+TH1F* exp = new TH1F("exp","",100,0,high_val);
+limittree->Draw("limit>>exp", "quantileExpected==0.5");
+TH1F* expp1 = new TH1F("expp1","",100,0,high_val);
+limittree->Draw("limit>>expp1", "quantileExpected>0.83 && quantileExpected<0.84");
+TH1F* expp2 = new TH1F("expp2","",100,0,high_val);
+limittree->Draw("limit>>expp2", "quantileExpected>0.97 && quantileExpected<0.98");
+
+//cout << "limit: " << exp->GetMean() << endl;
+
+
+   if (expp1->GetMean() < 1.)  continue;
+   SMS->Fill(x,y,expp1->GetMean());
+   //if (exp->GetMean() < 1.) {cout << "x: "<< x << ", y: "<< y << endl;}
+
+
+   //TF2 *f2 = new TF2("f2","0.1+1000", 110+10*i, 10+10*j, 110+10*i, 10+10*j);
+   //TF2 *f2 = new TF2("f2","50", 110+10*i, 10+10*j);
+   //f2->SetFillStyle(1000);
+   //f2->SetLineWidth(1);
+
+   file->Close();
+
+		}
+	  }
+
+
+   Double_t contours[2];
+   contours[0] =  0.8;
+   contours[1] =  0.9;
+
+
+ 
+   TCanvas c1("c1","c1",800,600);
+   c1.SetLeftMargin(0.1706731);
+   c1.SetRightMargin(0.1983173);
+   c1.SetTopMargin(0.04895105);
+   c1.SetBottomMargin(0.1416084);
+   c1.Range(-289.7381,-191.8196,1334.643,1074.487);
+   SMS->SetMarkerSize(1.);
+   SMS->SetMarkerColor(kWhite);
+   SMS->Draw("COLZ");
+/*   c1.Update();
+
+   // Get Contours
+   TObjArray *conts = (TObjArray*)gROOT->GetListOfSpecials()->FindObject("contours");
+   TList* contLevel = NULL;
+   TGraph* curv     = NULL;
+   TGraph* gc       = NULL;
+
+   Int_t nGraphs    = 0;
+   Int_t TotalConts = 0;
+
+
+   if (conts == NULL){
+      printf("*** No Contours Were Extracted!\n");
+      TotalConts = 0;
+      return;
+   } else {
+      TotalConts = conts->GetSize();
+   }
+
+   printf("TotalConts = %d\n", TotalConts);
+
+   for(i = 0; i < TotalConts; i++){
+      contLevel = (TList*)conts->At(i);
+      printf("Contour %d has %d Graphs\n", i, contLevel->GetSize());
+      nGraphs += contLevel->GetSize();
+   }
+
+   nGraphs = 0;
+
+   TCanvas* c1 = new TCanvas("c1","Contour List",610,0,600,600);
+   c1->SetTopMargin(0.15);
+   TH2F *hr = new TH2F("hr",
+   "#splitline{Negative contours are returned first (highest to lowest). Positive contours are returned from}{lowest to highest. On this plot Negative contours are drawn in red and positive contours in blue.}",
+   2, -2, 2, 2, 0, 6.5);
+*/
+
+   TLine lm(shell, 0 , 800. , 800-shell);
+   lm.SetLineColor(kBlack); lm.SetLineWidth(2); lm.SetLineStyle(2); lm.Draw();
+   SMS->GetYaxis()->SetTitle("LSP mass");
+   SMS->GetXaxis()->SetTitle("Stop mass");
+   SMS->GetZaxis()->SetTitle("Signal Strength"); 
+   SMS->GetZaxis()->SetRangeUser(0,1.);
+   TLatex l1;
+   l1.SetTextAlign(12);
+   l1.SetTextSize(0.04);
+   l1.SetNDC();
+   l1.DrawLatex(0.155, 0.98, "CMS Simulation, 20 fb^{-1}");
+   l1.DrawLatex(0.7, 0.98, "#sqrt{s} = 8 TeV");
+   l1.SetTextSize(0.03);
+
+   if (dir == "T2bw025") { tex = new TLatex(0.4736181,0.3409091,"#bf{m_{#tilde{#chi^{#pm}_{1}}} - m_{#tilde{#chi^{0}_{1}}} = m_{W}}");} 
+   if (dir == "T2bw050") { tex = new TLatex(0.321608,0.3513986,"#bf{m_{#tilde{#chi^{#pm}_{1}}} - m_{#tilde{#chi^{0}_{1}}} = m_{W}}");} 
+   if (dir == "T2bw075") { tex = new TLatex(0.2763819,0.3513986,"#bf{m_{#tilde{#chi^{#pm}_{1}}} - m_{#tilde{#chi^{0}_{1}}} = m_{W}}");} 
+   if (dir == "T2tt")    { tex = new TLatex(0.3278894,0.3391608,"#bf{m_{#tilde{t}} - m_{#tilde{#chi^{0}_{1}}} = m_{t}}");}
+
+   tex->SetNDC();
+   tex->SetTextAlign(12);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.03);
+   tex->SetTextAngle(41.15586);
+   tex->SetLineWidth(2);
+   tex->Draw();
+
+   //c1.SaveAs(savedir+"exp_exclusion_SMS_t2bW_75.C");
+   c1.SaveAs(savedir+"exp_exclusion_SMS_t2bW_75.pdf");
+   c1.SaveAs(savedir+"exp_exclusion_SMS_t2bW_75.png");
+
+
+}
+
+
+
+int xpointmin(TString dir, int ylimit){
+
+
+
+   double shell;
+
+   if (dir == "T2bw025") {dataset_name = "t2bw025"; shell = 80. / 0.25;}
+   if (dir == "T2bw050") {dataset_name = "t2bw050"; shell = 80. / 0.50;}
+   if (dir == "T2bw075") {dataset_name = "t2bw075"; shell = 80. / 0.75;}
+   if (dir == "T2tt")    {dataset_name = "t2tt";    shell = 173.;}
+
+
+	      
+	      int x, y;
+   	      int temp = 0;
+   	      double n =  12.5;
+              int breakingbad = 0; 
+
+              for(x=175; x<=800; x+=25){
+
+		if (breakingbad == 1) break;
+
+                      for(y=ylimit; y<=ylimit+25; y+=25;){
+
+
+  		  char filename[500];
+	          long begin,end;
+
+
+
+
+                  sprintf(filename,"/afs/cern.ch/work/s/sigamani/public/CMSSW_6_1_1/src/HiggsAnalysis/CombinedLimit/%s/higgsCombineS%d-N%d.Asymptotic.mH120.root", dataset_name, x, y);
+                  ifstream ifile(filename);
+	          if (!ifile.good()) continue; 
+
+		  TFile* file  = new TFile(filename, "READ");  
+		  char* name = (char*)file->GetName();
+
+
+
+TTree *limittree = (TTree*)file->Get("limit");
+
+
+double high_val = 100.;
+
+
+TH1F* obs = new TH1F("obs","",100,0,high_val);
+limittree->Draw("limit>>obs", "quantileExpected==-1");
+TH1F* expm2 = new TH1F("expm2","",100,0,high_val);
+limittree->Draw("limit>>expm2", "quantileExpected>0.02 && quantileExpected<0.03");
+TH1F* expm1 = new TH1F("expm1","",100,0,high_val);
+limittree->Draw("limit>>expm1", "quantileExpected>0.15 && quantileExpected<0.16");
+TH1F* exp = new TH1F("exp","",100,0,high_val);
+limittree->Draw("limit>>exp", "quantileExpected==0.5");
+TH1F* expp1 = new TH1F("expp1","",100,0,high_val);
+limittree->Draw("limit>>expp1", "quantileExpected>0.83 && quantileExpected<0.84");
+TH1F* expp2 = new TH1F("expp2","",100,0,high_val);
+limittree->Draw("limit>>expp2", "quantileExpected>0.97 && quantileExpected<0.98");
+
+
+		   if ( (exp->GetMean() < 1.) ) { cout << "x: "<< x << endl; breakingbad = 1; temp = x; break;} // continue;  
+
+
+		   file->Close();
+
+		}
+	  }
+
+   
+    if (temp == 0) return 0;
+	else
+    return temp - n ; 
+
+}
+
+
+
+int xpointmax(TString dir, int ylimit){
+
+
+
+   double shell;
+
+   if (dir == "T2bw025") {dataset_name = "t2bw025"; shell = 80. / 0.25;}
+   if (dir == "T2bw050") {dataset_name = "t2bw050"; shell = 80. / 0.50;}
+   if (dir == "T2bw075") {dataset_name = "t2bw075"; shell = 80. / 0.75;}
+   if (dir == "T2tt")    {dataset_name = "t2tt";    shell = 173.;}
+
+
+	      
+	      int x, y;
+   	      int temp = 0;
+   	      double n = 12.5;
+
+              for(x=175; x<=800; x+=25){
+
+
+                      for(y=ylimit; y<=ylimit+25; y+=25;){
+
+
+  		  char filename[500];
+	          long begin,end;
+
+
+
+ 		  sprintf(filename,"/afs/cern.ch/work/s/sigamani/public/CMSSW_6_1_1/src/HiggsAnalysis/CombinedLimit/%s/higgsCombineS%d-N%d.Asymptotic.mH120.root", dataset_name, x, y);
+                  ifstream ifile(filename);
+	          if (!ifile.good()) continue; 
+
+		  TFile* file  = new TFile(filename, "READ");  
+		  char* name = (char*)file->GetName();
+
+
+
+TTree *limittree = (TTree*)file->Get("limit");
+
+
+double high_val = 100.;
+
+
+TH1F* obs = new TH1F("obs","",100,0,high_val);
+limittree->Draw("limit>>obs", "quantileExpected==-1");
+TH1F* expm2 = new TH1F("expm2","",100,0,high_val);
+limittree->Draw("limit>>expm2", "quantileExpected>0.02 && quantileExpected<0.03");
+TH1F* expm1 = new TH1F("expm1","",100,0,high_val);
+limittree->Draw("limit>>expm1", "quantileExpected>0.15 && quantileExpected<0.16");
+TH1F* exp = new TH1F("exp","",100,0,high_val);
+limittree->Draw("limit>>exp", "quantileExpected==0.5");
+TH1F* expp1 = new TH1F("expp1","",100,0,high_val);
+limittree->Draw("limit>>expp1", "quantileExpected>0.83 && quantileExpected<0.84");
+TH1F* expp2 = new TH1F("expp2","",100,0,high_val);
+limittree->Draw("limit>>expp2", "quantileExpected>0.97 && quantileExpected<0.98");
+
+
+   if ( (exp->GetMean() > 1.) || (exp->GetMean() == 0.) ) continue ;
+
+ //  cout << exp->GetMean() << endl;
+//   cout << "x: "<< x << endl;
+
+           if (x > temp) {temp = x; }
+
+
+   file->Close();
+
+		}
+	  }
+
+   
+    cout << temp << endl;
+    if (temp == 0) return 0;
+	else
+    return temp + n; 
+
+}
+
+
+
+void testplot(){
+
+TH2D *hist = new TH2D("hist","",26,157.5, 812.5, 28, 12.5,712.5);
+
+hist->SetBinContent(1, 5.);
+
+TGraph* graph = new TGraph(11);
+graph->SetPoint(0, xpointmin("T2bw075", 25), 25);
+graph->SetPoint(1, xpointmin("T2bw075", 50), 50);
+graph->SetPoint(2, xpointmin("T2bw075", 75), 75);
+graph->SetPoint(3, xpointmin("T2bw075", 100), 100);
+graph->SetPoint(4, xpointmin("T2bw075", 125), 125);
+graph->SetPoint(5, xpointmin("T2bw075", 150), 150);
+graph->SetPoint(6, xpointmin("T2bw075", 125), 125);
+graph->SetPoint(7, xpointmin("T2bw075", 100), 100);
+graph->SetPoint(8, xpointmax("T2bw075",75), 75);
+graph->SetPoint(9, xpointmax("T2bw075",50), 50);
+graph->SetPoint(10, xpointmax("T2bw075",25), 25);
+
+graph->SetLineColor(kBlue);
+graph->SetLineStyle(2);
+graph->SetLineWidth(0.4);
+
+   TCanvas c1("c1","c1",800,600);
+   c1.SetLeftMargin(0.1706731);
+   c1.SetRightMargin(0.1983173);
+   c1.SetTopMargin(0.04895105);
+   c1.SetBottomMargin(0.1416084);
+   c1.Range(-289.7381,-191.8196,1334.643,1074.487);
+
+   hist->Draw();
+   //graph->Draw("cl");
+   graph->Draw("l");
+   c1.SaveAs(savedir+"test.png");
+}
+
+
+
+void rootlogon() {
+   gROOT->SetStyle("Plain");
+  // gStyle->SetPalette(1);
+   gStyle->SetOptStat(1111111);  // Show overflow, underflow + SumOfWeights 
+   gStyle->SetOptFit(111110);
+   gStyle->SetOptFile(1);
+   gStyle->SetMarkerStyle(20);
+   gStyle->SetMarkerSize(2.);
+   gStyle->SetMarkerColor(1);
+   gStyle->SetTitleOffset(1.20,"Y");
+   gStyle->SetTextFont(42);
+   
+    //define high def color palette
+    const Int_t NRGBs = 5;
+    const Int_t NCont = 255;
+
+    Double_t stops[NRGBs] = { 0.00, 0.34, 0.61, 0.84, 1.00 };
+    Double_t red[NRGBs]   = { 0.00, 0.00, 0.87, 1.00, 0.51 };
+    Double_t green[NRGBs] = { 0.00, 0.81, 1.00, 0.20, 0.00 };
+    Double_t blue[NRGBs]  = { 0.51, 1.00, 0.12, 0.00, 0.00 };
+    TColor::CreateGradientColorTable(NRGBs, stops, red, green, blue, NCont);
+    gStyle->SetNumberContours(NCont);
+
+    cout << "loading TDR style and setting as default" << endl;
+    gROOT->ProcessLine(".L ~/tdrstyle.C");
+    setTDRStyle();
+
+}
+
+
+
+
+
+
